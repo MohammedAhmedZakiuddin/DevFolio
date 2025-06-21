@@ -1,0 +1,347 @@
+<!DOCTYPE HTML>
+<html lang="en">
+
+<head>
+    <title>Certifications - Mohammed Zakiuddin</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+    <link rel="stylesheet" href="assets/css/main.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+    <noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+
+    <style>
+    
+    /* give the nav tabs and footer the same Inter typeface */
+    #nav .links a,
+    #nav .icons a,
+    #footer,
+    #footer * {
+        font-family: 'Inter', sans-serif !important;
+    }
+
+        /* put this at the very end of your <style> block */
+    #header .logo,        /* framed CERTIFICATIONS banner */
+    #copyright,           /* © Mohammed Zakiuddin line   */
+    #copyright * {        /* and anything nested inside  */
+        font-family: 'Inter', sans-serif !important;
+        font-weight: 700;               /* keeps the bold look */
+    }
+
+    body {
+        font-family: 'Inter', sans-serif;
+    }
+
+    .hero-row {
+        display: inline-flex;
+        align-items: center;
+        gap: .6rem;
+        line-height: 1;
+        margin: 0 0 .45rem;
+        font-size: 3.2rem;
+    }
+
+    .hero-title {
+        font-size: 3.2rem;
+        font-weight: 800;
+        letter-spacing: 1px;
+        text-transform: uppercase;
+        color: #222;
+        margin: 0;
+    }
+
+    .cert-hero {
+        text-align: center;
+        margin: 3.6rem 0 2rem;
+    }
+
+    .cert-hero p {
+        font-style: italic;
+        font-size: 1.05rem;
+        color: #555;
+        text-align: center;
+        margin: 0.35rem auto .8rem !important;
+    }
+
+    .section-pagination {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 2.5rem auto 1.8rem;
+    }
+
+    .nav-buttons {
+        display: flex;
+        gap: 2rem;
+        list-style: none;
+        padding: 0;
+        margin: 0;
+    }
+
+    .btn-nav {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        padding: 0.6rem 1.5rem;
+        border: 1px solid #111;
+        font-size: 0.75rem;
+        font-weight: 700;
+        text-transform: uppercase;
+        letter-spacing: 0.04em;
+        color: #111;
+        background: transparent;
+        text-decoration: none;
+        transition: background 0.2s ease, color 0.2s ease;
+        min-width: 120px;
+    }
+
+    .btn-nav:hover {
+        background: #111;
+        color: #fff;
+    }
+
+    .btn-nav .icon {
+        font-size: 1rem;
+    }
+
+    .prev .icon {
+        margin-right: 0.4rem;
+    }
+
+    .next .icon {
+        margin-left: 0.4rem;
+    }
+
+    .cert-list {
+        max-width: 750px;
+        margin: 3rem auto;
+        padding-left: 2rem;
+        position: relative;
+    }
+
+    .cert-item {
+        position: relative;
+        margin-bottom: 2.4rem;
+        padding-left: 1.4rem;
+        transition: background 0.3s ease, transform 0.2s ease;
+        border-radius: 8px;
+    }
+
+    .cert-item:hover {
+        background: #f8f9fc;
+        transform: translateY(-2px);
+    }
+
+    .cert-item::before {
+        content: '';
+        position: absolute;
+        top: 5px;
+        left: -1.05rem;
+        width: 10px;
+        height: 10px;
+        background-color: #4361ee;
+        border-radius: 50%;
+        z-index: 2;
+    }
+
+    .cert-item:hover::before {
+        background-color: #1d4ed8;
+        box-shadow: 0 0 0 4px rgba(67, 97, 238, 0.2);
+    }
+
+    .cert-item:not(:last-child)::after {
+        content: '';
+        position: absolute;
+        left: -0.9rem;
+        top: 1.3rem;
+        bottom: -2rem;
+        width: 2px;
+        background-color: #c4c4c4;
+        z-index: 0;
+    }
+
+    .cert-item h3 {
+        margin: 0 0 0.3rem;
+    }
+
+    .cert-item h3 a {
+        font-family: 'Inter', sans-serif;
+        font-weight: 600;
+        font-size: 1.1rem;
+        color: #3b5fe2;
+        text-decoration: none;
+    }
+
+    .cert-item h3 a:hover {
+        text-decoration: underline;
+    }
+
+    .cert-item p {
+        font-family: 'Inter', sans-serif;
+        font-weight: 400;
+        font-size: 0.95rem;
+        color: #444;
+        margin: 0.15rem 0;
+    }
+
+    .cert-header {
+        display: flex;
+        align-items: center;
+        gap: 0.75rem;
+        margin-bottom: 0.3rem;
+    }
+
+    .cert-logo {
+        width: 50px;
+        height: 50px;
+        object-fit: contain;
+        margin-right: 10px;
+        vertical-align: middle;
+        border-radius: 6px;
+        box-shadow: 0 0 4px rgba(0,0,0,0.08);
+        transition: transform 0.2s ease;
+    }
+
+    .cert-logo:hover {
+        transform: scale(1.05);
+    }
+
+    @media (max-width: 768px) {
+        .cert-list::before {
+            display: none;
+        }
+    }
+
+    </style>
+</head>
+
+
+<body class="is-preload">
+    <div id="wrapper">
+    <header id="header">
+        <a href="index.html" class="logo">Certifications</a>
+    </header>
+
+    <nav id="nav">
+        <ul class="links">
+            <li><a href="index.html">Dev Projects</a></li>
+            <li><a href="d_engineering.html">Data Engineering</a></li>
+            <li><a href="generic.html">CS</a></li>
+            <li><a href="hackathons.html">Hackathon</a></li>
+            <li class="active"><a href="distributed.html">Certifications</a></li>
+            <li><a href="elements.html">Publication</a></li>
+        </ul>
+        <ul class="icons">
+            <li><a href="https://www.linkedin.com/in/mohammed-ahmed-zakiuddin-00138917b/" class="icon brands fa-linkedin" target="_blank"><span          class="label">LinkedIn</span></a></li>
+            <li><a href="https://github.com/MohammedAhmedZakiuddin/" class="icon brands fa-github" target="_blank"><span class="label">GitHub</span></a></li>
+        </ul>
+    </nav>
+
+    <div id="main">
+        <header class="cert-hero">
+            <div class="hero-row">
+                <span style="font-size:3.2rem;">🎖️</span>
+                <h2 class="hero-title">Certifications</h2>
+            </div>
+        <p>"Qualifications backed by hands-on projects and industry-relevant training"</p>
+        <hr style="width:100%; max-width:1040px; border:none; border-top:1px solid #e0e0e0; margin:0 auto;">
+        </header>
+
+        <section class="cert-list">
+            <div class="cert-item">
+                <div class="cert-header">
+                    <img src="images/aws.jpg" alt="AWS Logo" class="cert-logo">
+                    <h3><a href="https://www.credly.com/badges/sample-aws" target="_blank">AWS Certified Data Engineer - Associate</a></h3>
+                </div>
+                <p>Issued: Aug 2025 • Valid until: Aug 2027</p>
+                <p>License No: AWS-12345678</p>
+            </div>
+
+            <div class="cert-item">
+                <div class="cert-header">
+                    <img src="images/oracle_logo.jpg" alt="Oracle Logo" class="cert-logo">
+                    <h3><a href="https://www.credly.com/badges/sample-azure" target="_blank">Oracle Database SQL Certified Associate - 1Z0-071</a></h3>
+                </div>
+                <p>Issued: July 2025 • Valid until: Jan 2027</p>
+                <p>License No: AZ-900-98765432</p>
+            </div>
+
+            <div class="cert-item">
+                <div class="cert-header">
+                    <img src="images/docker_logo.jpg" alt="Docker Logo" class="cert-logo">
+                    <h3><a href="https://www.linkedin.com/learning/certificates/6e9f169bb264e70cd3e9a4120a13c1ee3d282529f81c222342261f03c3f2d79a" target="_blank">Docker Foundations Professional Certificate</a></h3>
+                </div>
+                <p>Issued: Jun 2025 • No Expiry</p>
+                <p>License No: 6e9f169bb</p>
+            </div>
+
+            <div class="cert-item">
+                <div class="cert-header">
+                    <img src="images/codepath_org_logo.jpg" alt="Interview Prep" class="cert-logo">
+                    <h3><a href="https://www.credly.com/badges/sample-oci" target="_blank">Intermediate Technical Interview Prep (Advanced)</a></h3>
+                </div>
+                <p>Issued: May 2025 • No Expiry</p>
+                <p>License No: 46749</p>
+            </div>
+
+            <div class="cert-item">
+                <div class="cert-header">
+                    <img src="images/aws.jpg" alt="AWS Cloud Practitioner" class="cert-logo">
+                    <h3><a href="https://www.credly.com/badges/60423dd1-ac61-4060-b84a-f5d8845b3391/linked_in_profile" target="_blank">AWS Certified Cloud Practitioner</a></h3>
+                </div>
+                <p>Issued: Jun 2023 • Valid until: Jun 2026</p>
+                <p>License No: H511R7RC8NFEQVKZ</p>
+            </div>
+        </section>
+
+        <footer class="section-pagination">
+            <ul class="nav-buttons">
+                <li>
+                    <a href="hackathons.html" class="btn-nav prev">
+                        <span class="icon">←</span> Prev
+                    </a>
+                </li>
+                <li>
+                    <a href="elements.html" class="btn-nav next">
+                        Next <span class="icon">→</span>
+                    </a>
+                </li>
+            </ul>
+        </footer>
+    </div>
+
+    <footer id="footer">
+        <section class="split contact">
+            <section>
+                <h3>Phone</h3>
+                <p>(682)-246-0581</p>
+            </section>
+            <section>
+                <h3>Email</h3>
+                <p>ahmedzaki372100@gmail.com</p>
+            </section>
+            <section>
+                <h3>Social</h3>
+                <ul class="icons alt">
+                <li><a href="https://www.linkedin.com/in/mohammed-ahmed-zakiuddin-00138917b/" class="icon brands alt fa-linkedin"><span class="label">LinkedIn</span></a></li>
+                <li><a href="https://github.com/MohammedAhmedZakiuddin/" class="icon brands alt fa-github"><span class="label">GitHub</span></a></li>
+                </ul>
+            </section>
+        </section>
+    </footer>
+
+    <div id="copyright">
+        <ul>
+            <li>&copy; Mohammed Zakiuddin</li>
+        </ul>
+    </div>
+    </div>
+
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/js/jquery.scrollex.min.js"></script>
+    <script src="assets/js/jquery.scrolly.min.js"></script>
+    <script src="assets/js/browser.min.js"></script>
+    <script src="assets/js/breakpoints.min.js"></script>
+    <script src="assets/js/util.js"></script>
+    <script src="assets/js/main.js"></script>
+</body>
+</html>

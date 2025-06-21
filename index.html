@@ -1,0 +1,567 @@
+<!DOCTYPE HTML>
+
+<html>
+
+<head>
+	<title>Mohammed Zakiuddin</title>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+	<link rel="stylesheet" href="assets/css/main.css" />
+	<link
+		rel="stylesheet"
+		href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+	/>
+	<noscript>
+		<link rel="stylesheet" href="assets/css/noscript.css" />
+	</noscript>
+	<!-- WORK EXPERIENCE HERO -->
+	<!-- ───────────────────  PAGE-SPECIFIC CSS  ──────────────────── -->
+	<style>
+	/* 1 ▸ bring in Inter once */
+	@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
+
+	/* 2 ▸ global font reset */
+	html, body,
+	h1, h2, h3, h4, h5, h6,
+	p, ul, ol, li,
+	a, span, div,
+	button, input, select, textarea{
+		font-family:'Inter',sans-serif !important;
+		font-weight:400;
+	}
+
+	/* 3 ▸ nav tabs + header banner bold */
+	#nav .links a,
+	#header .logo{
+		font-weight:700; letter-spacing:.05em;
+	}
+
+	/* 4 ▸ copyright strip */
+	#copyright, #copyright *{
+		font-family:'Inter',sans-serif !important;
+		font-weight:700;
+	}
+
+	/* ───────────────────  PAGE BASICS  ─────────────────────────── */
+	#main{ padding-top:0; }
+	#nav { margin-bottom:0; border-bottom:none; }
+
+	/* ───────────────────  HERO  ────────────────────────────────── */
+	.page-hero{ text-align:center; margin:2.8rem auto 2.1rem; }
+	.page-hero .hero-row{
+		display:inline-flex; align-items:center; justify-content:center;
+		gap:.6rem; line-height:1;
+	}
+	.page-hero .hero-icon{ font-size:3.2rem; }
+	.page-hero .hero-title{
+		font-size:3.2rem; font-weight:800; letter-spacing:1px;
+		text-transform:uppercase; margin:0; color:#222;
+	}
+	.page-hero .hero-about{
+		margin:1.05rem auto 0; max-width:960px;
+		font-size:1.15rem; font-style:italic; color:#555;
+		line-height:1.45; display:inline-block; text-align:center;
+	}
+	.page-hero .hero-divider{
+		width:380px; margin:1.2rem auto 0; border:0; border-top:1px solid #ddd;
+	}
+
+	/* ───────────────────  EXPERIENCE WRAPPER  ──────────────────── */
+	#experience{ margin:3rem 0 4rem; }
+
+	/* shared font tokens (mirrors Certifications page) */
+	:root{
+		--xp-heading-font:'Inter',sans-serif;
+		--xp-body-font   :'Inter',sans-serif;
+		--xp-blue:#0066cc;
+	}
+	#experience, #experience *{ font-family:var(--xp-body-font); }
+
+	/* ── company row ────────────────────────────────────────────── */
+	.xp-company{ display:flex; gap:1.2rem; margin-bottom:3rem; }
+	.xp-logo img{ width:48px; height:48px; object-fit:contain; border-radius:6px; }
+	.xp-content{ flex:1; }
+
+	.xp-co-name{ margin:0; font-size:1.15rem; font-weight:800; }
+	.xp-co-meta{ margin:.1rem 0 1.3rem; font-size:.85rem; color:#666; }
+
+	/* ── nested timeline (company-level connector) ─────────────── */
+	.xp-role{ position:relative; }
+	.xp-role::after{
+		content:''; position:absolute; left:-16px; top:0; bottom:0;
+		width:2px; background:#c5c9cc;        /* vertical stroke */
+	}
+	.xp-role::before{
+		content:''; position:absolute; left:-19px; top:4px;
+		width:10px; height:10px; border-radius:50%;
+		background:#fff; border:2px solid #9ca3af;   /* dot */
+	}
+
+	/* ── role list (per company) ───────────────────────────────── */
+	.role-list{ list-style:none; margin:0; padding:0; position:relative; }
+	.role-list::before{
+		content:''; position:absolute; left:10px; top:.55rem;
+		width:2px; height:100%; background:#d0d4d8;
+	}
+
+	.role-item{ position:relative; padding-left:26px; margin-bottom:2.2rem; }
+	.role-item::before{
+		content:''; position:absolute; left:5.45px; top:.45rem;
+		width:10px; height:10px; border-radius:50%;
+		background:#f5f5f5; border:2px solid #9ca3af;
+	}
+	.role-item h4{ margin:0; font-size:.95rem; font-weight:700; }
+	.role-dates{ display:block; margin:.15rem 0 .8rem; font-size:.8rem; color:#666; }
+
+	/* ── bullets (ALL role lists) ───────────────────────────────── */
+	.exp-bullets, .role-bullets{ margin:0 0 .6rem; padding-left:3rem; }
+	.exp-bullets li, .role-bullets li{
+		font-size:.95rem; line-height:1.55; margin:0 0 .45rem;
+	}
+	.exp-bullets li::marker, .role-bullets li::marker{
+		color:#3d3d3d; font-size:.95rem;
+	}
+
+	/* skill/extra line */
+	.role-skills{ margin:0; font-size:.8rem; color:#666; }
+
+	/* ── card headings inside any exp-card wrapper ─────────────── */
+	.exp-card h3{
+		font-family:var(--xp-heading-font); font-size:1.1rem;
+		font-weight:800; letter-spacing:.5px; color:var(--xp-blue);
+	}
+	.exp-card h4{
+		font-family:var(--xp-heading-font);
+		font-size:.85rem; font-weight:600; color:#666;
+	}
+
+	/* ───────────────────  RESPONSIVE (<640 px)  ───────────────── */
+	@media(max-width:640px){
+		.page-hero .hero-title{ font-size:2.3rem; }
+		.xp-company{ flex-direction:column; gap:.6rem; }
+		.exp-bullets, .role-bullets{ padding-left:1.8rem; }
+		.role-list::before{ left:8px; }
+		.role-item::before{ left:1px; }
+		.xp-role::after{ left:-14px; }
+		.xp-role::before{ left:-17px; }
+	}
+	</style>
+
+</head>
+
+<body class="is-preload">
+
+	<!-- Wrapper -->
+	<div id="wrapper" class="fade-in">
+
+		<!-- Intro -->
+		<div id="intro">
+			<h1>Hello, I am<br />
+				Mohammed Zakiuddin.</h1>
+			<p>
+				As a graduate student at Texas A&M University-Commerce, I am deepening my expertise in Data Science with a focus on Data Engineering and AI. My passion for technology began at the University of Texas at Arlington, where I earned my Bachelor's in Computer Science.
+			</p> 
+			<ul class="actions">
+				<li><a href="#header" class="button icon solid solo fa-arrow-down scrolly">Continue</a></li>
+			</ul>
+		</div>
+
+		<!-- Header -->
+		<header id="header">
+			<a href="index.html" class="logo">MY PORTFOLIO</a>
+		</header>
+
+		<!-- Nav -->
+		<nav id="nav">
+			<ul class="links">
+				<li class="active"><a href="index.html">Work Experience</a></li>
+				<li><a href="d_engineering.html">Data Engineering</a></li>
+				<li><a href="generic.html">CS</a></li>
+				<li><a href="hackathons.html">Hackathon</a></li>
+				<li><a href="distributed.html">Certifications</a></li>
+				<li><a href="elements.html">Publication</a></li>
+			</ul>
+			<ul class="icons">
+				<li><a href="https://www.linkedin.com/in/mohammed-ahmed-zakiuddin-00138917b/" target="_blank"
+						class="icon brands alt fa-linkedin"><span class="label">Twitter</span></a></li>
+				<li><a href="https://github.com/MohammedAhmedZakiuddin/" target="_blank" class="icon brands fa-github"><span
+							class="label">GitHub</span></a></li>
+			</ul>
+		</nav>
+
+		<!-- Main -->
+		<div id="main">
+
+		<!-- ─── Work-Experience Hero ─────────────────────────────── -->
+		<div class="page-hero">
+			<div class="hero-row">
+				<span class="hero-icon">🧑‍💼</span>
+				<h2 class="hero-title">Work Experience</h2>
+			</div>
+
+			<!-- 2-line About-Me -->
+			<p class="hero-about"
+				style="font-size:1.15rem;font-style:italic;color:#555;line-height:1.45;">
+				Bridging <strong>data engineering</strong> and software craftsmanship to build secure micro-services.<br>
+				Delivering real-time data pipelines that turn vision into scalable products.
+			</p>
+
+
+
+			<hr class="hero-divider" />
+		</div>
+		<!-- ──────────────────────────────────────────────────────── -->
+
+		<!-- ─── EXPERIENCE SECTION ───────────────────────────────────── -->
+		<section id="experience">
+
+		<!-- ───── company 1 ─────────────────────────────────────── -->
+		<article class="xp-company">
+
+			<div class="xp-logo">
+			<img src="images/sarsaudirailway_logo.jpeg" alt="Saudi Arabia Railways logo">
+			</div>
+
+			<div class="xp-content">
+			<!-- company header -->
+			<h3 class="xp-co-name">Saudi Railway Company</h3>
+			<p class="xp-co-meta">Full-time · 7 mos | Riyadh, Saudi Arabia · Remote</p>
+
+			<!-- nested timeline of roles -->
+			<ul class="role-list">
+
+				<li class="role-item">
+				<h4>Associate Software Engineer</h4>
+				<span class="role-dates">Jun 2025 – Present · 1 mo</span>
+
+				<!-- Associate Software Engineer (current role) -->
+				<ul class="exp-bullets">
+					<li>Refactored legacy modules into <strong>Spring Boot</strong> micro-services, cutting deployment time by 35 %.</li>
+					<li>Built a <strong>Kafka</strong> event pipeline that reduced invoice-processing latency from minutes to seconds.</li>
+					<li>Automated CI/CD with <strong>Azure DevOps</strong> &nbsp;→ on-demand releases and zero-downtime patches.</li>
+				</ul>		
+
+				</li>
+
+				<li class="role-item">
+				<h4>Software Engineer</h4>
+				<span class="role-dates">Dec 2024 – May 2025 · 6 mos</span>
+
+				<ul class="role-bullets">
+					<li>Migrated legacy <strong>.NET</strong> APIs to <strong>Java Spring Boot</strong> with a multi-layered micro-service architecture.</li>
+					<li>Enhanced system reliability with a <strong>Kafka</strong> event-driven pipeline.</li>
+					<li>Secured endpoints using <strong>OAuth2</strong> / <strong>JWT</strong> and automated CI/CD in <strong>Azure DevOps</strong>.</li>
+				</ul>
+
+				<p class="role-skills">💎 Server-Side Programming · REST APIs + 9 skills</p>
+				</li>
+
+			</ul>
+			</div>
+
+		</article>
+
+		<!-- ───── company 2 ─────────────────────────────────────── -->
+		<article class="xp-company">
+
+			<div class="xp-logo">
+			<img src="images/dar-logo.jpeg" alt="Dar Al Riyadh logo">
+			</div>
+
+			<div class="xp-content">
+			<h3 class="xp-co-name">Dar Al Riyadh Group</h3>
+			<p class="xp-co-meta">Internship · 3 mos | Riyadh, Saudi Arabia · On-site</p>
+
+			<ul class="role-list">
+
+				<li class="role-item">
+				<h4>Software Engineer Intern</h4>
+				<span class="role-dates">Jun 2022 – Aug 2022 · 3 mos</span>
+
+				<ul class="role-bullets">
+					<li>Developed survey-analysis web app with <strong>ASP.NET & C#</strong>.</li>
+					<li>Created interactive dashboards in <strong>SSRS</strong> to improve decision-making.</li>
+				</ul>
+
+				<p class="role-skills">💎 C#, CSS, HTML + 5 skills</p>
+				</li>
+
+			</ul>
+			</div>
+
+		</article>
+
+		<!-- add more <article class="xp-company"> … </article> blocks as needed -->
+
+		</section>
+
+		<!-- ─── Projects Hero ────────────────────────────────────────── -->
+		<div class="page-hero projects-hero">
+		<div class="hero-row">
+			<!-- pick any Font-Awesome icon you like; here I used fa-laptop-code -->
+			<span class="hero-icon"><i class="fa-solid fa-code-branch"></i></span>
+			<h2 class="hero-title">Software Development Projects</h2>
+		</div>
+
+		<!-- short, professional tagline -->
+		<p class="hero-about">
+			Turning ideas into robust, user-centred applications one repo at a time.
+		</p>
+
+		<hr class="hero-divider" />
+		</div>
+		<!-- ──────────────────────────────────────────────────────────── -->
+			<!-- Featured Post -->
+			<article class="post featured">
+				<header class="major">
+					<h2><a href="http://songstop-amey.netlify.app" target="_blank">SongStop - Song Streaming
+							Application<br />
+						</a></h2>
+				</header>
+				<a href="http://songstop-amey.netlify.app" target="_blank" class="image fit"><img
+						src="images/songstop.png" alt="" /></a>
+				<p> A Song Streaming Web Application developed using ReactJS, Tailwind CSS, and Shazam API that lets you
+					stream any song for free from 4 charts and 14 different genres. You can also view the Lyrics for
+					every song. </p>
+				<ul class="actions special">
+					<li><a href="http://songstop-amey.netlify.app" target="_blank" class="button">Checkout</a></li>
+				</ul>
+			</article>
+
+			<section class="posts">
+				<article>
+					<header>
+						<h2><a href="https://finatica-amey-shinde.vercel.app/" target="_blank">Finatica Finance
+								Dashboard<br />
+							</a></h2>
+					</header>
+					<a href="https://finatica-amey-shinde.vercel.app/" target="_blank" class="image fit"><img
+							src="images/finatica.png" alt="" /></a>
+					<p>
+						MERN Finance Dashboard App that has Machine Learning Predictions - MongoDB, React, Express,
+						Node.js
+
+					</p>
+					<ul class="actions special">
+						<li><a href="https://finatica-amey-shinde.vercel.app/" target="_blank"
+								class="button">Checkout</a>
+						</li>
+					</ul>
+				</article>
+
+				<!-- Posts -->
+
+				<article>
+					<header>
+						<h2><a href="https://vixie.netlify.app" target="_blank">Vixie Movies Database<br />
+							</a></h2>
+					</header>
+					<a href="https://vixie.netlify.app" target="_blank" class="image fit"><img src="images/vixie.png"
+							alt="" /></a>
+					<p> This is a Movie Database application made with ReactJS, Tailwind CSS, and Firebase Firestore
+						using TMDB API. Deployed and hosted with Firebase. </p>
+					<ul class="actions special">
+						<li><a href="https://vixie.netlify.app" target="_blank" class="button">Checkout</a>
+						</li>
+					</ul>
+				</article>
+
+				<article>
+					<header>
+						<h2><a href="https://administration-site.netlify.app/" target="_blank">Admin Dashboard<br />
+							</a></h2>
+					</header>
+					<a href="https://administration-site.netlify.app/" target="_blank" class="image fit"><img
+							src="images/admin-dash.png" alt="" /></a>
+					<p> React Admin Dashboard - Material UI, Nivo Charts, Formik, Yup, and FullCalendar </p>
+					<ul class="actions special">
+						<li><a href="https://administration-site.netlify.app/" target="_blank"
+								class="button">Checkout</a>
+						</li>
+					</ul>
+				</article>
+				<article>
+					<header>
+						<h2><a href="https://ecommerce-stripe-pi.vercel.app/" target="_blank">ShopiCo E-Commerce
+								with
+								Stripe Integration.<br />
+							</a></h2>
+					</header>
+					<a href="https://ecommerce-stripe-pi.vercel.app/" target="_blank" class="image fit"><img
+							src="images/shopico.png" alt="" /></a>
+					<p> E-Commerce Application developed with TypeScript, Sanity, NextJS with Stripe Payments
+						integration. </p>
+					<ul class="actions special">
+						<li><a href="https://ecommerce-stripe-pi.vercel.app/" target="_blank"
+								class="button">Checkout</a>
+						</li>
+					</ul>
+				</article>
+
+				<article>
+					<header>
+						<h2><a href="https://cryptinfo-amey.netlify.app" target="_blank">CryptInfo -
+								Crypto Currency Tracker<br />
+							</a></h2>
+					</header>
+					<a href="https://cryptinfo-amey.netlify.app" target="_blank" class="image fit"><img
+							src="images/crypto.png" alt="" /></a>
+					<p> A Crypto-Currency Tracker Web application made using React.js and Coin Gecko API.
+						Deployed and
+						hosted with Amazon S3 webpages. </p>
+					<ul class="actions special">
+						<li><a href="https://cryptinfo-amey.netlify.app" target="_blank" class="button">Checkout</a>
+						</li>
+					</ul>
+				</article>
+				<article>
+					<header>
+						<h2><a href="https://price-vision.herokuapp.com/" target="_blank">Price Vision - Real
+								Estate
+								Price Prediction<br />
+							</a></h2>
+					</header>
+					<a href="https://price-vision.herokuapp.com/" target="_blank" class="image fit"><img
+							src="images/vision.png" alt="" /></a>
+					<p> This is a python website application that uses Regression models like Linear Regression,
+						Lasso
+						Regression, Tree Models, Ensemble Models, and Pipelines to reduce the Root Mean Square
+						Error
+						(RMSE) on the features to predict the correct label (Price). Libraries used - Scikit
+						Learn,
+						NumPy.</p>
+					<ul class="actions special">
+						<li><a href="https://price-vision.herokuapp.com/" target="_blank" class="button">Checkout</a>
+						</li>
+					</ul>
+				</article>
+				<article>
+					<header>
+						<h2><a href="https://lucky-florentine-1a6660.netlify.app/" target="_blank">Chat
+								Application -
+								Teams Clone<br />
+							</a></h2>
+					</header>
+					<a href="https://lucky-florentine-1a6660.netlify.app/" target="_blank" class="image fit"><img
+							src="images/teams.png" alt="" /></a>
+					<p> A chat Application with the theme of Microsoft Teams written with ReactJS and Chat
+						Engine API
+					</p>
+					<ul class="actions special">
+						<li><a href="https://lucky-florentine-1a6660.netlify.app/" target="_blank"
+								class="button">Checkout</a></li>
+					</ul>
+				</article>
+				<article>
+					<header>
+						<h2><a href="https://github.com/Pistonamey/airbnb" target="_blank">Airbnb Experiences
+								Clone<br />
+							</a></h2>
+					</header>
+					<a href="https://github.com/Pistonamey/airbnb" target="_blank" class="image fit"><img
+							src="images/airbnb.png" alt="" /></a>
+					<p> This application is the clone of Airbnb Experiences for Mobile made using HTML, CSS &
+						ReactJS.
+					</p>
+					<ul class="actions special">
+						<li><a href="https://github.com/Pistonamey/airbnb" target="_blank" class="button">Checkout</a>
+						</li>
+					</ul>
+				</article>
+				<article>
+					<header>
+						<h2><a href="https://github.com/Pistonamey/Project-Check" target="_blank">Project
+								Check<br />
+							</a>Project Manager</h2>
+					</header>
+					<a href="https://github.com/Pistonamey/Project-Check" target="_blank" class="image fit"><img
+							src="images/prcheck.png" alt="" /></a>
+					<p> A simple TRELLO based Android application that helps Users create Management Boards,
+						setup
+						timelines and assign members for Project Management. Application uses Firebase Firestore
+						database for CRUD operations and storing user information. This application is based on
+						the MVVM
+						(Model-View-View-Model) architecture.</p>
+					<ul class="actions special">
+						<li><a href="https://github.com/Pistonamey/Project-Check" target="_blank" class="button">Github
+								Repository</a></li>
+					</ul>
+				</article>
+				<article>
+					<header>
+						<h2>Serveme System Android Application</h2>
+					</header>
+					<a href="https://github.com/Pistonamey/ServeMe-System-Application " class="image main"><img
+							src="images/serve_me.png" alt="" /></a>
+					<p>This is an Android application that
+						connects customers who need to repair their
+						home appliances to vendors that provide the
+						services. This application is written in Java
+						and uses Firebase as the database to collect
+						user information. </p>
+
+					<ul class="actions special">
+						<li><a href="https://github.com/Pistonamey/ServeMe-System-Application " target="_blank"
+								class="button large">Github Repository</a></li>
+					</ul>
+				</article>
+
+			</section>
+
+			<!-- ===== NAV BUTTONS ===== -->
+                <footer class="section-pagination">
+                    <ul class="nav-buttons">
+                        <li>
+                            <a href="d_engineering.html" class="btn-nav next">
+                                Next <span class="icon">→</span>
+                            </a>
+                        </li>
+                    </ul>
+                </footer>
+
+		</div>
+
+		<!-- Footer -->
+		<footer id="footer">
+
+			<section class="split contact">
+				<section>
+					<h3>Phone</h3>
+					<p><a href="#">(682)-246-0581</a></p>
+				</section>
+				<section>
+					<h3>Email</h3>
+					<p><a href="#">ahmedzaki372100@gmail.com</a></p>
+				</section>
+				<section>
+					<h3>Social</h3>
+					<ul class="icons alt">
+						<li><a href="https://www.linkedin.com/in/mohammed-ahmed-zakiuddin-00138917b/" class="icon brands alt fa-linkedin"><span
+									class="label">LinkedIn</span></a></li>
+						<li><a href="https://github.com/MohammedAhmedZakiuddin/" class="icon brands alt fa-github"><span
+									class="label">GitHub</span></a></li>
+					</ul>
+				</section>
+			</section>
+		</footer>
+
+		<!-- Copyright -->
+		<div id="copyright">
+			<ul>
+				<li>&copy; Mohammed Zakiuddin</li>
+			</ul>
+		</div>
+	</div>
+
+	<!-- Scripts -->
+	<script src="assets/js/jquery.min.js"></script>
+	<script src="assets/js/jquery.scrollex.min.js"></script>
+	<script src="assets/js/jquery.scrolly.min.js"></script>
+	<script src="assets/js/browser.min.js"></script>
+	<script src="assets/js/breakpoints.min.js"></script>
+	<script src="assets/js/util.js"></script>
+	<script src="assets/js/main.js"></script>
+
+</body>
+
+</html>

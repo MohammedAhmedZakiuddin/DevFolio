@@ -1,0 +1,200 @@
+<!DOCTYPE HTML>
+<html lang="en">
+
+<head>
+    <title>Blogs - Mohammed Zakiuddin</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+    <link rel="stylesheet" href="assets/css/main.css" />
+    <noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+
+    <!-- ── Page-specific CSS (font switch + existing rules) ──────────────── -->
+    <style>
+    /* 1 ▸ bring in Inter (400-800) */
+    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap');
+
+    /* 2 ▸ global font reset */
+    html, body,
+    h1, h2, h3, h4, h5, h6,
+    p, ul, ol, li,
+    a, span, div,
+    button, input, select, textarea{
+        font-family:'Inter',sans-serif !important;
+        font-weight:400;
+    }
+
+    /* 3 ▸ nav tabs & header logo bold */
+    #nav .links a,
+    #header .logo{
+        font-weight:700;              /* keep solid look */
+        letter-spacing:.05em;
+    }
+
+    /* 4 ▸ copyright strip */
+    #copyright,
+    #copyright *{
+        font-family:'Inter',sans-serif !important;
+        font-weight:700;
+    }
+
+    /* ===== Unified Pagination Buttons (unchanged, now in Inter) ========= */
+    .section-pagination{margin:3rem 0 2rem;text-align:center;}
+    .nav-buttons{
+        display:inline-flex;flex-wrap:wrap;gap:1.2rem;
+        padding:0;margin:0;list-style:none;justify-content:center;
+    }
+    .btn-nav{
+        display:inline-flex;align-items:center;justify-content:center;
+        padding:.6rem 1.5rem;border:1px solid #111;
+        font-size:.75rem;font-weight:700;letter-spacing:.03em;
+        text-transform:uppercase;color:#111;background:transparent;
+        text-decoration:none;transition:background .2s ease,color .2s ease;
+    }
+    .btn-nav:hover{background:#111;color:#fff;}
+    .btn-nav .icon{font-size:1rem;}
+    .prev .icon{margin-right:.4rem;}
+    .next .icon{margin-left :.4rem;}
+
+    /* ===== main post spacing (unchanged) ===== */
+    #main .post{padding-top:4.25rem;}
+
+    /* ——— make “MY PUBLICATIONS” match the bold Certifications style ——— */
+    .post header.major h1,
+    .post header.major h1 span{
+        font-weight: 800 !important;     /* heavy like the Certifications hero */
+        letter-spacing: 1px;             /* same tracking                     */
+        text-transform: uppercase;       /* ensures full caps, if desired     */
+    }
+
+
+    </style>
+</head>
+
+<body class="is-preload">
+
+    <div id="wrapper">
+
+        <!-- Header -->
+        <header id="header">
+            <a href="index.html" class="logo">BLOGS</a>
+        </header>
+
+        <!-- Nav -->
+        <nav id="nav">
+            <ul class="links">
+                <li><a href="index.html">Dev Projects</a></li>
+                <li><a href="d_engineering.html">Data Engineering</a></li>
+                <li><a href="generic.html">CS</a></li>
+                <li><a href="hackathons.html">Hackathon</a></li>
+                <li><a href="distributed.html">Certifications</a></li>
+                <li class="active"><a href="elements.html">Publication</a></li>
+            </ul>
+            <ul class="icons">
+                <li><a href="https://www.linkedin.com/in/mohammed-ahmed-zakiuddin-00138917b/" class="icon brands fa-linkedin"><span class="label">LinkedIn</span></a></li>
+                <li><a href="https://github.com/MohammedAhmedZakiuddin/" class="icon brands fa-github"><span class="label">GitHub</span></a></li>
+            </ul>
+        </nav>
+
+        <!-- Main -->
+        <div id="main">
+
+            <!-- Post -->
+            <section class="post">
+                <header class="major" style="text-align: center; margin-bottom: 2rem; padding-bottom: 1.2rem; border-bottom: 1px solid #e0e0e0;">
+                    <h1 style="font-size: 3.2rem; margin-bottom: 1rem;">
+                        🎬 <span style="letter-spacing: 1px;">MY PUBLICATIONS</span>
+                    </h1>
+                    <p style="font-size: 1.1rem; font-style: italic; color: #666; margin-top: 0;">
+                        Showcasing peer-reviewed contributions in intelligent systems and data science.
+                    </p>
+                </header>
+
+                <article>
+                    <header style="text-align: center; margin-bottom: 2rem;">
+                        <h2 style="font-size: 1.4rem; font-weight: 400; line-height: 1.5; margin-bottom: 0.8rem; text-transform: none; font-family: Georgia, 'Times New Roman', serif;">
+                            <a href="https://www.dropbox.com/scl/fi/yqsk1ottoo8evfypn0fbi/IEEE_Research_Paper_Mohammed_Zakiuddin.pdf?rlkey=cwymtcj56akxxj1z4bu8ulb4s&st=nrg3cfcr&dl=0" target="_blank" style="text-decoration: none; color: inherit;">
+                                🎓 CineMatch — A Personalized Movie Recommender using Collaborative Filtering & NLP
+                            </a>
+                        </h2>
+
+                        <p style="display: inline-block; background: #f8f9fa; padding: 6px 14px; border-radius: 6px; font-size: 0.95rem; font-style: italic; color: #333; box-shadow: 0 2px 6px rgba(0,0,0,0.08);">
+                            <span style="color: #007bff;">🔷</span> IEEE BigDataServices 2025
+                        </p>
+                    </header>
+
+                    <a href="https://www.dropbox.com/scl/fi/yqsk1ottoo8evfypn0fbi/IEEE_Research_Paper_Mohammed_Zakiuddin.pdf?rlkey=cwymtcj56akxxj1z4bu8ulb4s&st=nrg3cfcr&dl=0" target="_blank" class="image fit">
+                        <img src="images/MVS.png" alt="Movie Recommendation System UI" style="box-shadow: 0 10px 25px rgba(0,0,0,0.15); border-radius: 10px;" />
+                    </a>
+
+                    <p>
+                        🧠 <strong>Abstract</strong> – Recommendation systems play a pivotal role in personalizing content delivery across digital platforms. In this project, I developed a Movie Recommendation System using Collaborative Filtering and Natural Language Processing (NLP), leveraging the MovieLens 25M dataset.
+
+                        Our system analyzes user preferences and predicts top movie recommendations by computing cosine similarity scores on TF-IDF-transformed titles and employing user-based collaborative filtering to match user behavior patterns.
+
+                        A Netflix-style UI, an interactive widget using ipywidgets, and real-time top 10 recommendations enhance user experience. The model’s accuracy was evaluated using Root Mean Squared Error (RMSE), achieving a low error score of 0.78, indicating strong prediction performance.
+                    </p>
+
+                    <!-- Consistent Button Layout -->
+                    <footer class="section-pagination">
+                        <ul class="nav-buttons">
+                            <li>
+                                <a href="distributed.html" class="btn-nav prev">
+                                    <span class="icon">←</span> Prev
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://www.dropbox.com/scl/fi/yqsk1ottoo8evfypn0fbi/IEEE_Research_Paper_Mohammed_Zakiuddin.pdf?rlkey=cwymtcj56akxxj1z4bu8ulb4s&st=nrg3cfcr&dl=0" class="btn-nav" target="_blank">
+                                    Checkout
+                                </a>
+                            </li>
+                            <li>
+                                <a href="index.html" class="btn-nav">
+                                    🏠 Home
+                                </a>
+                            </li>
+                        </ul>
+                    </footer>
+                </article>
+            </section>
+        </div>
+
+        <!-- Footer -->
+        <footer id="footer">
+            <section class="split contact">
+                <section>
+                    <h3>Phone</h3>
+                    <p><a href="#">(682)-246-0581</a></p>
+                </section>
+                <section>
+                    <h3>Email</h3>
+                    <p><a href="#">ahmedzaki372100@gmail.com</a></p>
+                </section>
+                <section>
+                    <h3>Social</h3>
+                    <ul class="icons alt">
+                        <li><a href="https://www.linkedin.com/in/mohammed-ahmed-zakiuddin-00138917b/" class="icon brands alt fa-linkedin"><span class="label">LinkedIn</span></a></li>
+                        <li><a href="https://github.com/MohammedAhmedZakiuddin/" class="icon brands alt fa-github"><span class="label">GitHub</span></a></li>
+                    </ul>
+                </section>
+            </section>
+        </footer>
+
+        <!-- Copyright -->
+        <div id="copyright">
+            <ul>
+                <li>&copy; Mohammed Zakiuddin</li>
+            </ul>
+        </div>
+
+    </div>
+
+    <!-- Scripts -->
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/js/jquery.scrollex.min.js"></script>
+    <script src="assets/js/jquery.scrolly.min.js"></script>
+    <script src="assets/js/browser.min.js"></script>
+    <script src="assets/js/breakpoints.min.js"></script>
+    <script src="assets/js/util.js"></script>
+    <script src="assets/js/main.js"></script>
+</body>
+</html>

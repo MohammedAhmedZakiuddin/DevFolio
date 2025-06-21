@@ -1,0 +1,243 @@
+<!DOCTYPE HTML>
+<html lang="en">
+
+<head>
+	<title>Data Engineering - Mohammed Zakiuddin</title>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+
+	<!-- core site styles -->
+	<link rel="stylesheet" href="assets/css/main.css" />
+	<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+
+	<!-- Font Awesome for database icon (already in main.css for the template, but safe to add) -->
+	<link rel="stylesheet"
+		href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+	<!-- ── Page-specific tweaks ───────────────────────────────────────────── -->
+	<style>
+	/* 1 ▸ bring in Inter once for the page */
+	@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
+
+	/* 2 ▸ reset everything to Inter */
+	html, body,
+	h1, h2, h3, h4, h5, h6,
+	p, ul, ol, li,
+	a, span, div,
+	button, input, select, textarea {
+	font-family: 'Inter', sans-serif;
+	font-weight: 400;
+	}
+
+	/* 3 ▸ establish clear hierarchy */
+	h1, h2, h3 { font-weight: 800; letter-spacing: .4px; }
+	h4, h5, h6 { font-weight: 700; }
+
+	/* ─── PAGE SPACING ───────────────────────────────────────────────────── */
+	#main { padding-top:0; }
+	#nav  { margin-bottom:0; border-bottom:none; }
+
+	/* ─── HERO ───────────────────────────────────────────────────────────── */
+	.de-hero           { text-align:center; margin:2.8rem auto 2.1rem; }
+	.de-hero .title-row{
+	display:inline-flex; align-items:center; gap:.6rem; line-height:1;
+	}
+	.de-hero .db-icon  { font-size:3.2rem; }
+	.de-hero .hero-title{
+	font-size:3.2rem; font-weight:800; text-transform:uppercase;
+	margin:0; color:#222;
+	}
+	.de-hero .tagline{
+	margin:.55rem auto 0; max-width:960px;
+	font-size:1.15rem; font-style:italic; color:#555; text-align:center;
+	}
+	.de-hero hr{
+	width:380px; margin:1.2rem auto 0;
+	border:none; border-top:1px solid #ddd;
+	}
+	@media(max-width:640px){ .de-hero .hero-title{ font-size:2.3rem; } }
+
+	/* ─── NAV + BUTTONS (outline style) ──────────────────────────────────── */
+	.links a,
+	.posts .actions.special .button,
+	.pagination a.previous,
+	.pagination a.next,
+	.btn-nav {
+	font-family:'Inter',sans-serif;       /* reinforce Inter */
+	font-weight:700;
+	letter-spacing:.03em;                 /* slightly tighter */
+	text-transform:uppercase;
+	}
+
+	.posts .actions.special .button,
+	.pagination a.previous,
+	.pagination a.next {
+	display:inline-flex; align-items:center; justify-content:center;
+	padding:.95rem 3.4rem;
+	font-size:.9rem;
+	background:transparent !important;
+	border:1px solid #0f1b24 !important;
+	color:#0f1b24 !important; box-shadow:none !important;
+	transition:all .25s ease;
+	}
+	.posts .actions.special .button:hover,
+	.pagination a.previous:hover,
+	.pagination a.next:hover,
+	.posts .actions.special .button:focus,
+	.pagination a.previous:focus,
+	.pagination a.next:focus{
+	background:#0f1b24 !important; color:#fff !important;
+	}
+
+	/* ─── PAGINATION LAYOUT ─────────────────────────────────────────────── */
+	.pagination{
+	display:flex; justify-content:center; gap:2rem;
+	padding:3rem 0 0; border:none;
+	}
+	.pagination a.previous::before{ content:"\2190"; margin-right:.75rem; }
+	.pagination a.next::after   { content:"\2192"; margin-left :.75rem; }
+
+	/* (Everything else on the page keeps its existing styles) */
+	</style>
+
+</head>
+
+<body class="is-preload">
+
+	<!-- Wrapper -->
+	<div id="wrapper">
+
+		<!-- Header -->
+		<header id="header">
+			<a href="index.html" class="logo">Data Engineering Projects</a>
+		</header>
+
+		<!-- Nav -->
+		<nav id="nav">
+			<ul class="links">
+				<li><a href="index.html">Dev Projects</a></li>
+				<li class="active"><a href="d_engineering.html">Data Engineering</a></li>
+				<li><a href="generic.html">CS</a></li>
+				<li><a href="hackathons.html">Hackathon</a></li>
+				<li><a href="distributed.html">Certifications</a></li>
+				<li><a href="elements.html">Publication</a></li>
+			</ul>
+			<ul class="icons">
+				<li><a href="https://www.linkedin.com/in/mohammed-ahmed-zakiuddin-00138917b/"
+					class="icon brands fa-linkedin"><span class="label">LinkedIn</span></a></li>
+				<li><a href="https://github.com/MohammedAhmedZakiuddin/"
+					class="icon brands fa-github"><span class="label">GitHub</span></a></li>
+			</ul>
+		</nav>
+
+		<!-- Main -->
+		<div id="main">
+
+			<!-- HERO -->
+			<div class="de-hero">
+				<div class="title-row">
+					<i class="fas fa-database db-icon"></i>
+					<h1 class="hero-title">DATA ENGINEERING PROJECTS</h1>
+				</div>
+				<p class="tagline" style="font-size:1.15rem;font-style:italic;color:#555;">
+					Cloud Pipelines, ETL Processes, Real-Time Streaming &amp; Analytics Engineering
+				</p>
+				<hr>
+			</div>
+
+			<!-- Projects -->
+			<section class="posts">
+
+				<article>
+					<header>
+						<h2><a href="https://github.com/Pistonamey/uber_data_etl" target="_blank">
+							Uber Dashboard ETL</a></h2>
+					</header>
+					<a href="https://github.com/Pistonamey/uber_data_etl" target="_blank"
+					class="image fit"><img src="images/uber.png" alt="Uber ETL" /></a>
+					<p>Analyze Uber data using GCP Storage, Python, Mage pipelines, BigQuery &amp; Looker Studio.</p>
+					<ul class="actions special">
+						<li><a href="https://github.com/Pistonamey/uber_data_etl" target="_blank"
+							class="button">GitHub Repository</a></li>
+					</ul>
+				</article>
+
+				<article>
+					<header>
+						<h2><a href="https://github.com/Pistonamey/kafka_stock_analysis" target="_blank">
+							Stock-Market Kafka Streaming</a></h2>
+					</header>
+					<a href="https://github.com/Pistonamey/kafka_stock_analysis" target="_blank"
+					class="image fit"><img src="images/Architecture.jpg" alt="Kafka Architecture" /></a>
+					<p>End-to-end real-time stock-market pipeline with Python, AWS, Apache Kafka, Glue, Athena &amp; SQL.</p>
+					<ul class="actions special">
+						<li><a href="https://github.com/Pistonamey/kafka_stock_analysis" target="_blank"
+							class="button">GitHub Repository</a></li>
+					</ul>
+				</article>
+
+			</section>
+
+			<!-- Pager -->
+			<footer class="section-pagination">
+				<ul class="nav-buttons">
+					<li>
+						<a href="index.html" class="btn-nav prev">
+							<span class="icon">←</span>
+							PREV
+						</a>
+					</li>
+
+					<!--  If you ever want extra buttons (e.g. Live Demo, GitHub) 
+						just duplicate one <li> and change the label / link.  -->
+
+					<li>
+						<a href="generic.html" class="btn-nav next">
+							NEXT
+							<span class="icon">→</span>
+						</a>
+					</li>
+				</ul>
+			</footer>
+		</div>
+
+		<!-- Footer -->
+		<footer id="footer">
+			<section class="split contact">
+				<section>
+					<h3>Phone</h3>
+					<p><a href="#">(682) 246-0581</a></p>
+				</section>
+				<section>
+					<h3>Email</h3>
+					<p><a href="#">ahmedzaki372100@gmail.com</a></p>
+				</section>
+				<section>
+					<h3>Social</h3>
+					<ul class="icons alt">
+						<li><a href="https://www.linkedin.com/in/mohammed-ahmed-zakiuddin-00138917b/"
+							class="icon brands alt fa-linkedin"><span class="label">LinkedIn</span></a></li>
+						<li><a href="https://github.com/MohammedAhmedZakiuddin/"
+							class="icon brands alt fa-github"><span class="label">GitHub</span></a></li>
+					</ul>
+				</section>
+			</section>
+		</footer>
+
+		<!-- Copyright -->
+		<div id="copyright">
+			<ul><li>&copy; Mohammed Zakiuddin</li></ul>
+		</div>
+
+	</div>
+
+	<!-- Scripts -->
+	<script src="assets/js/jquery.min.js"></script>
+	<script src="assets/js/jquery.scrollex.min.js"></script>
+	<script src="assets/js/jquery.scrolly.min.js"></script>
+	<script src="assets/js/browser.min.js"></script>
+	<script src="assets/js/breakpoints.min.js"></script>
+	<script src="assets/js/util.js"></script>
+	<script src="assets/js/main.js"></script>
+
+</body>
+</html>

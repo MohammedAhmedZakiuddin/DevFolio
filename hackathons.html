@@ -1,0 +1,204 @@
+<!DOCTYPE HTML>
+<html lang="en">
+
+<head>
+    <title>Hackathons - Mohammed Zakiuddin</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+    <link rel="stylesheet" href="assets/css/main.css" />
+    <noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+
+<!-- ── Page-specific CSS (font switch only + existing rules) ─────────── -->
+<style>
+/* 1 ▸ load Inter (weights 400-800) */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap');
+
+/* 2 ▸ GLOBAL FONT RESET  */
+html, body,
+h1, h2, h3, h4, h5, h6,
+p, ul, ol, li,
+a, span, div,
+button, input, select, textarea{
+    font-family:'Inter',sans-serif !important;
+    font-weight:400;
+}
+
+/* (nav tabs need to stay bold) */
+#nav .links a{ font-weight:700; letter-spacing:.05em; }
+
+/* override the inline Georgia on the project sub-heading */
+.hackathon-hero h3{ font-family:'Inter',sans-serif !important; }
+
+/* ---------- HERO SECTION (unchanged except inheriting Inter) ---------- */
+.hero-row{
+    display:inline-flex;align-items:center;gap:.6rem;
+    line-height:1;margin:0 0 .45rem;font-size:3.2rem;
+}
+.hero-row .hero-title{
+    font-size:3.2rem;font-weight:800;letter-spacing:1px;
+    text-transform:uppercase;color:#222;margin:0;
+}
+.hackathon-hero .hackathon-tagline{
+    margin:.35rem auto .8rem!important;font-size:1.05rem;
+    font-style:italic;color:#555;text-align:center;
+}
+#main .post.featured{padding-top:.5rem;}
+
+/* ---------- UNIFIED NAV BUTTONS -------------------------------------- */
+.section-pagination{margin:3rem 0 2rem;text-align:center;}
+.nav-buttons{
+    display:inline-flex;flex-wrap:wrap;gap:1.2rem;
+    padding:0;margin:0;list-style:none;justify-content:center;
+}
+.btn-nav{
+    display:inline-flex;align-items:center;justify-content:center;
+    padding:.6rem 1.5rem;border:1px solid #111;
+    font-size:.75rem;font-weight:700;letter-spacing:.03em;
+    text-transform:uppercase;color:#111;background:transparent;
+    text-decoration:none;transition:background .2s ease,color .2s ease;
+}
+.btn-nav:hover{background:#111;color:#fff;}
+.btn-nav .icon{font-size:1rem;}
+.prev .icon{margin-right:.4rem;}
+.next .icon{margin-left :.4rem;}
+
+/* Force background to match other sections like Blogs and CS */
+body{
+    background:linear-gradient(135deg,#3b3a36,#5b4f4f);
+    color:#222;
+}
+</style>
+
+</head>
+
+<body class="is-preload">
+    <div id="wrapper" class="fade-in">
+
+        <!-- Header -->
+        <header id="header">
+            <a href="index.html" class="logo">Hackathon Projects</a>
+        </header>
+
+        <!-- Nav -->
+        <nav id="nav">
+            <ul class="links">
+                <li><a href="index.html">Dev Projects</a></li>
+                <li><a href="d_engineering.html">Data Engineering</a></li>
+                <li><a href="generic.html">CS</a></li>
+                <li class="active"><a href="hackathons.html">Hackathon</a></li>
+                <li><a href="distributed.html">Certifications</a></li>
+                <li><a href="elements.html">Publication</a></li>
+            </ul>
+            <ul class="icons">
+                <li><a href="https://www.linkedin.com/in/mohammed-ahmed-zakiuddin-00138917b/" target="_blank"
+                        class="icon brands fa-linkedin"><span class="label">LinkedIn</span></a></li>
+                <li><a href="https://github.com/MohammedAhmedZakiuddin/" target="_blank"
+                        class="icon brands fa-github"><span class="label">GitHub</span></a></li>
+            </ul>
+        </nav>
+
+        <!-- Main -->
+        <div id="main">
+            <article class="post featured">
+
+                <!-- ===== HERO HEADER ===== -->
+                <header class="hackathon-hero" style="text-align:center; margin:3.6rem 0 2rem;">
+                    <div class="hero-row">
+                        <span style="font-size:3.2rem;">🏆</span>
+                        <h2 class="hero-title">Hackathon&nbsp;Projects</h2>
+                    </div>
+                    <p class="hackathon-tagline">
+                        Selected high-impact prototypes built under time constraints to solve real-world challenges.
+                    </p>
+                    <hr style="width:100%; max-width:1040px; border:none; border-top:1px solid #e0e0e0; margin:0 auto;">
+                </header>
+
+                <!-- ===== AI FINANCIAL ASSISTANT ===== -->
+                <header style="text-align:center; margin:0 0 1.4rem;">
+                    <h3 style="display:inline-flex; align-items:center; gap:0.5rem; font-family:Georgia,'Times New Roman',serif; font-size:2rem; font-weight:400; margin:0.6rem 0 0.4rem;">
+                        🤖 AI Financial Assistant
+                    </h3>
+                    <hr style="width:60px; border:none; border-top:1px solid #ccc; margin:0.4rem auto;">
+                    <p style="font-size:0.95rem; color:#666; font-style:italic; margin-bottom:0.6rem;">
+                        🥈 Built at <strong>Hackathon 2025 – Texas A&amp;M University</strong>
+                    </p>
+                </header>
+
+                <a href="assets/files/Hackathon_PPT.pdf" download class="image fit" style="margin-top:-10px;">
+                    <img src="images/Hackathon_2025.png" alt="JP Morgan Chase Financial AI Agent" />
+                </a>
+
+                <p>
+                    Developed in a 24-hour hackathon, this intelligent assistant lets users upload PDF-based financial documents
+                    and ask natural language questions. The system parses the files and uses GPT-4 via OpenAI API to return
+                    accurate, context-aware answers. Built using Python, PyMuPDF, Gradio, and SQLite, it showcases rapid
+                    prototyping of AI-powered document analysis tools.
+                </p>
+
+                <!-- ===== NAV BUTTONS ===== -->
+                <footer class="section-pagination">
+                    <ul class="nav-buttons">
+                        <li>
+                            <a href="generic.html" class="btn-nav prev">
+                                <span class="icon">←</span> Prev
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://huggingface.co/spaces/ahmedzaki3721/ai-financial-agent" class="btn-nav" target="_blank">
+                                Live Demo
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://github.com/MohammedAhmedZakiuddin/AI_Financial_Agent" class="btn-nav" target="_blank">
+                                GitHub
+                            </a>
+                        </li>
+                        <li>
+                            <a href="distributed.html" class="btn-nav next">
+                                Next <span class="icon">→</span>
+                            </a>
+                        </li>
+                    </ul>
+                </footer>
+            </article>
+        </div>
+
+        <!-- Footer -->
+        <footer id="footer">
+            <section class="split contact">
+                <section>
+                    <h3>Phone</h3>
+                    <p>(682)-246-0581</p>
+                </section>
+                <section>
+                    <h3>Email</h3>
+                    <p>ahmedzaki372100@gmail.com</p>
+                </section>
+                <section>
+                    <h3>Social</h3>
+                    <ul class="icons alt">
+                        <li><a href="https://www.linkedin.com/in/mohammed-ahmed-zakiuddin-00138917b/"
+                                class="icon brands alt fa-linkedin"><span class="label">LinkedIn</span></a></li>
+                        <li><a href="https://github.com/MohammedAhmedZakiuddin/"
+                                class="icon brands alt fa-github"><span class="label">GitHub</span></a></li>
+                    </ul>
+                </section>
+            </section>
+        </footer>
+
+        <!-- Copyright -->
+        <div id="copyright">
+            <ul>
+                <li>&copy; Mohammed Zakiuddin</li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/js/browser.min.js"></script>
+    <script src="assets/js/breakpoints.min.js"></script>
+    <script src="assets/js/util.js"></script>
+    <script src="assets/js/main.js"></script>
+</body>
+</html>

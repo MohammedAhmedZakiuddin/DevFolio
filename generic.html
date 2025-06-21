@@ -1,0 +1,397 @@
+<!DOCTYPE HTML>
+
+<html lang="en">
+<head>
+	<title>DS & ALGO - Mohammed Zakiuddin</title>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+	<link rel="stylesheet" href="assets/css/main.css" />
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+	<noscript>
+		<link rel="stylesheet" href="assets/css/noscript.css" />
+	</noscript>
+
+<!-- ── Page-specific CSS (hero + project buttons only) ─────────────── -->
+<style>
+/* ▸ 1  bring in Inter (400-800) */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap');
+
+/* ▸ 2  GLOBAL FONT SWITCH  */
+html, body, button, input, select, textarea,
+h1, h2, h3, h4, h5, h6,
+p, a, li, blockquote, dt, dd, span, div{
+    font-family:'Inter',sans-serif !important;   /* ← everything now Inter */
+}
+
+/* ---------- basic spacing (unchanged) ---------- */
+#main{padding-top:0;}
+#nav {margin-bottom:0;border-bottom:none;}
+
+/* ---------- NAV TABS (keep solid bold look) ---- */
+#nav .links a{
+    font-weight:700;letter-spacing:.05em;
+}
+
+/* ---------- hero (icon + heading) -------------- */
+.section-hero{margin-top:0;padding-top:1.4rem;text-align:center;}
+.section-hero .title-row{line-height:1;}
+.section-hero h2{
+    font-size:3.2rem;font-weight:800;letter-spacing:1px;
+    text-transform:uppercase;margin:0;color:#222;
+}
+.section-hero p{margin:.35rem auto 0;}
+.section-hero .tagline{margin-top:.05rem;}
+.section-hero hr{margin:1rem auto 0;width:380px;}
+.hero-icon{font-size:3.4rem;color:#0f1b24;margin-right:.75rem;}
+
+/* ---------- PROJECT TITLES -------------------- */
+.posts h2,
+.posts h2 a{
+    font-weight:800;letter-spacing:.04em;color:#0f1b24;
+}
+
+/* ---------- PROJECT BUTTONS ------------------- */
+.posts .actions.special .button{
+    display:inline-flex;align-items:center;justify-content:center;
+    padding:.95rem 3.4rem;
+
+    border:1px solid #0f1b24;
+    background:transparent;
+    color:#0f1b24;
+
+    font-weight:700;font-size:.9rem;
+    letter-spacing:.03em;             /* tighter for Inter */
+    text-transform:uppercase;text-decoration:none;
+    transition:all .25s ease;
+}
+.posts .actions.special .button:hover,
+.posts .actions.special .button:focus{
+    background:#0f1b24;color:#fff;
+}
+
+/* ---------- (Prev/Next pager untouched) ------- */
+</style>
+
+
+</head>
+
+<body class="is-preload">
+
+	<!-- Wrapper -->
+	<div id="wrapper">
+
+		<!-- Header -->
+		<header id="header">
+			<a href="index.html" class="logo">Computer Science Projects</a>
+		</header>
+
+		<!-- Nav -->
+		<nav id="nav">
+			<ul class="links">
+				<li><a href="index.html">Dev Projects</a></li>
+				<li><a href="d_engineering.html">Data Engineering</a></li>
+				<li class="active"><a href="generic.html">CS</a></li>
+				<li><a href="hackathons.html">Hackathon</a></li>
+				<li><a href="distributed.html">Certifications</a></li>
+				<li><a href="elements.html">Publication</a></li>
+			</ul>
+			<ul class="icons">
+				<li><a href="https://www.linkedin.com/in/mohammed-ahmed-zakiuddin-00138917b/" class="icon brands fa-linkedin"><span
+							class="label">LinkedIn</span></a></li>
+				<li><a href="https://github.com/MohammedAhmedZakiuddin/" class="icon brands fa-github"><span
+							class="label">GitHub</span></a></li>
+			</ul>
+		</nav>
+
+		<!-- Main -->
+		<div id="main">
+		<!-- ===== CS HERO ===== -->
+		<header class="section-hero" style="text-align:center;">
+			<div class="title-row" style="display:inline-flex;align-items:center;gap:.6rem;line-height:1;">
+				<i class="fas fa-laptop-code hero-icon"></i>   <!-- NEW ICON -->
+				<h2 style="font-size:3.2rem;font-weight:800;letter-spacing:1px;text-transform:uppercase;color:#222;margin:0;">
+					Computer&nbsp;Science&nbsp;Projects
+				</h2>
+			</div>
+
+			<p class="tagline"
+			style="font-size:1.15rem;font-style:italic;color:#555;margin:.35rem auto 0;">
+				Data&nbsp;Structures,&nbsp;Algorithms,&nbsp;Operating&nbsp;Systems,&nbsp;and&nbsp;Robotics&nbsp;Projects
+			</p>
+			<hr style="margin:1rem auto 0;width:380px;">
+		</header>
+
+
+
+			<!-- Post -->
+			<section class="posts">
+
+				<article>
+					<header>
+						<h2><a href="http://visualize-djikstra.netlify.app" target="_blank">Pathfinding Visualizer<br />
+							</a></h2>
+					</header>
+					<a href="http://visualize-djikstra.netlify.app" target="_blank" class="image fit"><img
+							src="images/dijkstras.png" alt="" /></a>
+					<p> Developed a Pathfinder Visualizer that finds the shortest path using the dijkstra's algorithm
+						using ReactJS and deployed using S3.</p>
+					<ul class="actions special">
+						<li><a href="http://visualize-djikstra.netlify.app" target="_blank" class="button">View
+								Project</a></li>
+					</ul>
+				</article>
+				<article>
+					<header>
+						<h2><a href="https://github.com/Pistonamey/DS-ALGO_Graph_and_Reachability" target="blank">Graphs
+								and<br />
+								Reachability</a></h2>
+					</header>
+					<a href="https://github.com/Pistonamey/DS-ALGO_Graph_and_Reachability" target="blank"
+						class="image fit"><img src="images/pebble.png" alt="" /></a>
+					<p> C program that uses the “pebble game” technique to test if an input graph is minimally rigid (in
+						two dimensions). </p>
+					<ul class="actions special">
+						<li><a href="https://github.com/Pistonamey/DS-ALGO_Graph_and_Reachability" target="blank"
+								class="button">Github Repository</a></li>
+					</ul>
+				</article>
+				<article>
+					<header>
+						<h2><a href="https://github.com/MohammedAhmedZakiuddin/MandelBrot" target="_blank">MandelBrot Threading<br /></a></h2>
+					</header>
+					<a href="https://github.com/MohammedAhmedZakiuddin/MandelBrot" target="_blank" class="image fit" style="display: block; text-align: left;">
+						<img src="images/mandelb.png" alt="Mandelbrot fractal image" />
+					</a>
+					<p style="text-align: left;">
+						Utilized <strong>C programming</strong> and <strong>parallel programming</strong> along with <strong>multi-threading</strong> techniques to generate Mandelbrot images, minimizing the time required for image creation.
+						The image is divided into separate bands, with each thread working on a distinct section for optimized performance. A command line argument 
+						<code>-n</code> is included to specify the number of threads, allowing users to tailor the computation process for their needs.
+					</p>
+					<h3 style="text-align: left;">Key Features:</h3>
+					<ul style="text-align: left;">
+						<li>Fast computation using multiple threads with <strong>parallel programming</strong> and <strong>multi-threading</strong>.</li>
+						<li>Customizable thread count with <code>-n</code> argument.</li>
+						<li>Each thread works on separate image bands for optimal efficiency.</li>
+					</ul>
+					<ul class="actions special" style="text-align: left;">
+						<li>
+							<a href="https://github.com/MohammedAhmedZakiuddin/MandelBrot" target="_blank" class="button">Github Repository</a>
+						</li>
+					</ul>
+				</article>
+				<article>
+					<header>
+						<h2><a href="https://github.com/MohammedAhmedZakiuddin/FAT32-FileSystem">32 Bit FAT System</a></h2>
+					</header>
+					<a href="https://github.com/MohammedAhmedZakiuddin/FAT32-FileSystem" target="_blank" class="image fit"><img src="images/Fat32.jpg" alt="FAT-32 File System" /></a>
+					<p style="text-align: left;">
+						Dive into the world of <strong>FAT-32 file systems</strong> with this project, which enables editing and interpreting a 32-bit file system image using <strong>Linux shell commands</strong>. The program includes functionality for opening and managing FAT-32 file system images, retrieving file information, and directory navigation with comprehensive commands for file and data manipulation.
+					</p>
+					<h3 style="text-align: left;">Key Features:</h3>
+					<ul style="text-align: left;">
+						<li>Shell-based file system editing and management in Linux.</li>
+						<li>Supports commands like <code>open</code>, <code>info</code>, <code>ls</code>, <code>read</code>, <code>cd</code>, <code>del</code>, and <code>undel</code>.</li>
+						<li>Provides detailed file system information in hexadecimal and base-10 formats.</li>
+						<li>Handles relative and absolute path navigation.</li>
+						<li>Retrieves files from FAT-32 images to the current working directory.</li>
+					</ul>
+					<h3 style="text-align: left;">How to Get Started:</h3>
+					<ul style="text-align: left;">
+						<li>Compile the program: <code>gcc mfs.c</code></li>
+						<li>Run the executable: <code>./a.out</code></li>
+						<li>Open a FAT-32 image and start managing your file system efficiently.</li>
+					</ul>
+					<p style="text-align: left;">
+						<em>Email for access to disk image (FAT32.img).</em>
+					</p>
+					<ul class="actions special">
+						<li><a href="https://github.com/MohammedAhmedZakiuddin/FAT32-FileSystem" target="_blank" class="button">Github Repository</a></li>
+					</ul>
+				</article>
+				<article>
+					<header>
+						<h2><a href="https://github.com/MohammedAhmedZakiuddin/ArenaAllocator" target="blank">First Fit & Next Fit Memory Allocation</a></h2>
+					</header>
+					<a href="https://github.com/MohammedAhmedZakiuddin/ArenaAllocator" target="blank" class="image fit">
+						<img src="images/mem_alloc.png" alt="Memory Allocation Strategies: First Fit and Next Fit" />
+					</a>
+					<p style="text-align: left;">
+						This project implements a <strong>memory arena allocator</strong> written in C, utilizing strategies such as <strong>First Fit</strong> and <strong>Next Fit</strong> to efficiently allocate memory in Linux systems. It manages memory through a linked list and provides key features for tracking and coalescing memory segments.
+					</p>
+					<h3 style="text-align: left;">Key Features:</h3>
+					<ul style="text-align: left;">
+						<li>Supports memory allocation algorithms: <strong>First Fit, Next Fit, Best Fit, and Worst Fit</strong>.</li>
+						<li>Tracks memory segments with a single or doubly linked list.</li>
+						<li>Efficiently handles allocation, freeing, and coalescing of memory blocks.</li>
+						<li>Includes an API for initializing, allocating, freeing, and destroying memory arenas.</li>
+					</ul>
+					<h3 style="text-align: left;">How to Run:</h3>
+					<ul style="text-align: left;">
+						<li>Clean and compile: <code>make clean</code> and <code>make</code></li>
+						<li>Run the program: <code>./unit_test</code></li>
+						<li>Initialize memory with a desired size and algorithm: <code>mavalloc_init(65535, FIRST_FIT)</code></li>
+					</ul>
+					<p style="text-align: left;">
+						Designed for applications with stringent performance requirements, this project showcases how large memory pools are allocated on startup to avoid frequent system calls. Applications like games, aircraft systems, and spacecraft can benefit significantly from this implementation.
+					</p>
+					<ul class="actions special">
+						<li><a href="https://github.com/MohammedAhmedZakiuddin/ArenaAllocator" target="blank" class="button">Github Repository</a></li>
+					</ul>
+				</article>
+				<article>
+					<header>
+						<h2><a href="https://github.com/MohammedAhmedZakiuddin/MavShell" target="blank">MavShell</a></h2>
+					</header>
+					<a href="https://github.com/MohammedAhmedZakiuddin/MavShell" target="blank" class="image fit">
+						<img src="images/mavshell.png" alt="MavShell Command Line Interface" />
+					</a>
+					<p style="text-align: left;">
+						<strong>MavShell</strong> is a lightweight and customized shell program that functions similarly to popular shells like Bourne Shell (bash), C-Shell (csh), and Korn Shell (ksh). Written in C, MavShell accepts user commands, forks child processes, and executes those commands, supporting process management and basic scripting functionalities.
+					</p>
+					<h3 style="text-align: left;">Key Features:</h3>
+					<ul style="text-align: left;">
+						<li>Supports up to 10 command-line parameters for each input.</li>
+						<li>Commands include basic utilities like <code>ls</code>, <code>cd</code>, <code>mkdir</code>, and process history commands.</li>
+						<li>Tracks and displays the last 15 commands or processes executed by the user.</li>
+						<li>Ability to re-run past commands using <code>!n</code>, where <code>n</code> refers to the command index in history.</li>
+						<li>Handles process creation and execution efficiently using <code>fork</code> and <code>exec</code>.</li>
+						<li>Interactive navigation with <code>cd</code> for directory traversal, including relative paths (e.g., <code>cd ..</code>).</li>
+					</ul>
+					<h3 style="text-align: left;">Commands to Run:</h3>
+					<ul style="text-align: left;">
+						<li>Compile: <code>gcc msh.c</code></li>
+						<li>Run: <code>./a.out</code> or <code>./msh.c</code></li>
+					</ul>
+					<p style="text-align: left;">
+						With robust error handling and process management capabilities, MavShell is designed to provide a simple yet powerful interface for users to execute commands and manage processes in C.
+					</p>
+					<ul class="actions special">
+						<li>
+							<a href="https://github.com/MohammedAhmedZakiuddin/MavShell" target="blank" class="button">Github Repository</a>
+						</li>
+					</ul>
+				</article>
+				<article>
+					<header>
+						<h2><a href="https://github.com/MohammedAhmedZakiuddin/JohnsonRule" target="blank">Greedy Algorithms<br />Johnson's Rule</a></h2>
+					</header>
+					<a href="https://github.com/MohammedAhmedZakiuddin/JohnsonRule" target="blank" class="image fit">
+						<img src="images/johnsons.png" alt="Johnson's Rule for Two-Stage Production Scheduling" />
+					</a>
+					<p style="text-align: left;">
+						This project demonstrates the implementation of <strong>Johnson's Rule</strong>, a simple yet effective <strong>greedy algorithm</strong> to optimally solve the two-stage production (flow) scheduling problem. By minimizing production time and ensuring efficient workflow, Johnson's Rule provides an ideal solution for scheduling in manufacturing and other production environments.
+					</p>
+					<h3 style="text-align: left;">Key Features:</h3>
+					<ul style="text-align: left;">
+						<li>Uses a greedy method to find optimal scheduling sequences for two-stage production systems.</li>
+						<li>Minimizes production time and ensures efficient utilization of resources.</li>
+						<li>Offers a systematic step-by-step process to arrange tasks based on processing times.</li>
+					</ul>
+					<p style="text-align: left;">
+						Perfect for solving real-world scheduling problems in industries, Johnson's Rule provides clarity and efficiency by sorting tasks in an optimal sequence based on specific processing times at two distinct workstations.
+					</p>
+					<ul class="actions special">
+						<li><a href="https://github.com/MohammedAhmedZakiuddin/JohnsonRule" target="blank" class="button">Github Repository</a></li>
+					</ul>
+				</article>
+				<article>
+					<header>
+						<h2><a href="https://github.com/MohammedAhmedZakiuddin/HuffmanCoding" target="blank">Huffman Coding<br />Dynamic Programming</a></h2>
+					</header>
+					<a href="https://github.com/MohammedAhmedZakiuddin/HuffmanCoding" target="blank" class="image fit">
+						<img src="images/hufman.png" alt="Huffman Coding with Dynamic Programming" />
+					</a>
+					<p style="text-align: left;">
+						This project demonstrates the implementation of <strong>order-preserving Huffman coding</strong>, utilizing the <strong>dynamic programming formulation</strong>. It efficiently compresses data by assigning variable-length bit codes to symbols based on their probabilities, while maintaining the input order of the character set.
+					</p>
+					<h3 style="text-align: left;">Key Features:</h3>
+					<ul style="text-align: left;">
+						<li>Generates the cost matrix to determine the most efficient Huffman code tree.</li>
+						<li>Constructs an optimal order-preserving Huffman code tree for the given symbols.</li>
+						<li>Outputs the bit code assigned to each symbol and calculates the expected bits per symbol based on the input probabilities.</li>
+					</ul>
+					<h3 style="text-align: left;">How to Use:</h3>
+					<ul style="text-align: left;">
+						<li>Compile the code: <code>gcc code3.c</code></li>
+						<li>Run the program: <code>./a.out lab3fall21.a.dat</code></li>
+						<li>Input: A positive integer <code>n</code> and a sequence of <code>n</code> doubles representing the probabilities of symbols in an ordered character set.</li>
+						<li>Output: Cost matrix, Huffman code tree, bit codes for symbols, and expected bits per symbol.</li>
+					</ul>
+					<p style="text-align: left;">
+						Ideal for applications requiring efficient data compression, this implementation showcases the power of dynamic programming in solving optimization problems.
+					</p>
+					<ul class="actions special">
+						<li><a href="https://github.com/MohammedAhmedZakiuddin/HuffmanCoding" target="blank" class="button">Github Repository</a></li>
+					</ul>
+				</article>
+			</section>
+			
+			<footer class="section-pagination">
+				<ul class="nav-buttons">
+					<li>
+						<a href="d_engineering.html" class="btn-nav prev">
+							<span class="icon">←</span>
+							PREV
+						</a>
+					</li>
+
+					<!--  If you ever want extra buttons (e.g. Live Demo, GitHub) 
+						just duplicate one <li> and change the label / link.  -->
+
+					<li>
+						<a href="hackathons.html" class="btn-nav next">
+							NEXT
+							<span class="icon">→</span>
+						</a>
+					</li>
+				</ul>
+			</footer>
+		</div>
+
+		<!-- Footer -->
+		<footer id="footer">
+
+			<section class="split contact">
+				
+				<section>
+					<h3>Phone</h3>
+					<p><a href="#">(682)-246-0581</a></p>
+				</section>
+				<section>
+					<h3>Email</h3>
+					<p><a href="#">ahmedzaki372100@gmail.com</a></p>
+				</section>
+				<section>
+					<h3>Social</h3>
+					<ul class="icons alt">
+						<li><a href="https://www.linkedin.com/in/mohammed-ahmed-zakiuddin-00138917b/" class="icon brands alt fa-linkedin"><span
+									class="label">Twitter</span></a></li>
+						<li><a href="https://github.com/MohammedAhmedZakiuddin/" class="icon brands alt fa-github"><span
+									class="label">GitHub</span></a></li>
+					</ul>
+				</section>
+			</section>
+		</footer>
+
+		<!-- Copyright -->
+		<div id="copyright">
+			<ul>
+				<li>&copy; Mohammed Zakiuddin</li>
+			</ul>
+		</div>
+
+	</div>
+
+	<!-- Scripts -->
+	<script src="assets/js/jquery.min.js"></script>
+	<script src="assets/js/jquery.scrollex.min.js"></script>
+	<script src="assets/js/jquery.scrolly.min.js"></script>
+	<script src="assets/js/browser.min.js"></script>
+	<script src="assets/js/breakpoints.min.js"></script>
+	<script src="assets/js/util.js"></script>
+	<script src="assets/js/main.js"></script>
+
+</body>
+
+</html>
