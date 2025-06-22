@@ -47,23 +47,53 @@
 	#nav { margin-bottom:0; border-bottom:none; }
 
 	/* ───────────────────  HERO  ────────────────────────────────── */
-	.page-hero{ text-align:center; margin:2.8rem auto 2.1rem; }
-	.page-hero .hero-row{
-		display:inline-flex; align-items:center; justify-content:center;
-		gap:.6rem; line-height:1;
+	.page-hero {
+		text-align: center;
+		margin: 2.5rem auto 2rem;  /* slightly tighter top/bottom */
+		padding: 0 1rem;
 	}
-	.page-hero .hero-icon{ font-size:3.2rem; }
-	.page-hero .hero-title{
-		font-size:3.2rem; font-weight:800; letter-spacing:1px;
-		text-transform:uppercase; margin:0; color:#222;
+
+	.page-hero .hero-row {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		gap: 0.6rem;
+		line-height: 1;
+		margin-bottom: 0.3rem;       /* ⬅️ Tighter gap under title */
 	}
-	.page-hero .hero-about{
-		margin:1.05rem auto 0; max-width:960px;
-		font-size:1.15rem; font-style:italic; color:#555;
-		line-height:1.45; display:inline-block; text-align:center;
+
+
+	.page-hero .hero-icon {
+		font-size: clamp(2.1rem, 4.2vw, 3.4rem); /* slightly smaller */
+		line-height: 1;
 	}
-	.page-hero .hero-divider{
-		width:380px; margin:1.2rem auto 0; border:0; border-top:1px solid #ddd;
+
+	.page-hero .hero-title {
+		font-size: clamp(2.1rem, 4.2vw, 3.4rem); /* slightly smaller */
+		font-weight: 800;
+		letter-spacing: 0.02em;
+		margin: 0;
+		color: #222;
+		white-space: nowrap;
+	}
+
+	.page-hero .hero-about {
+		margin: 0.8rem auto 0;
+		max-width: 1200px;
+		font-size: 1.05rem;
+		font-style: italic;
+		color: #555;
+		line-height: 1.45;
+		text-align: center;
+		white-space: normal; /* allows wrapping only when necessary */
+	}
+
+
+	.page-hero .hero-divider {
+		width: 340px;
+		margin: 1.2rem auto 0;
+		border: 0;
+		border-top: 1px solid #ddd;
 	}
 
 	/* ───────────────────  EXPERIENCE WRAPPER  ──────────────────── */
@@ -105,11 +135,13 @@
 	}
 
 	.role-item{ position:relative; padding-left:26px; margin-bottom:2.2rem; }
+
 	.role-item::before{
 		content:''; position:absolute; left:5.45px; top:.45rem;
 		width:10px; height:10px; border-radius:50%;
 		background:#f5f5f5; border:2px solid #9ca3af;
 	}
+
 	.role-item h4{ margin:0; font-size:.95rem; font-weight:700; }
 	.role-dates{ display:block; margin:.15rem 0 .8rem; font-size:.8rem; color:#666; }
 
@@ -130,13 +162,117 @@
 		font-family:var(--xp-heading-font); font-size:1.1rem;
 		font-weight:800; letter-spacing:.5px; color:var(--xp-blue);
 	}
+
 	.exp-card h4{
 		font-family:var(--xp-heading-font);
 		font-size:.85rem; font-weight:600; color:#666;
 	}
 
+	/* Hero section styling */
+	.projects-hero {
+		text-align: center;
+		margin: 2.5rem auto 2rem;
+	}
+
+	/* Title row */
+	.projects-hero .hero-row {
+		display: inline-flex;
+		align-items: center;
+		justify-content: center;
+		gap: 0.6rem;
+		margin-bottom: 0.4rem;
+		white-space: nowrap;
+	}
+
+	.projects-hero .hero-icon {
+		font-size: 2.3rem;
+		line-height: 1;
+	}
+
+	.projects-hero .hero-title {
+		font-size: clamp(2.1rem, 4.2vw, 3.4rem);
+		font-weight: 800;
+		letter-spacing: 0.02em;
+		margin: 0;
+		color: #222;
+		white-space: nowrap;
+		overflow-x: hidden;
+		text-overflow: ellipsis;
+	}
+
+	/* Subtitle and divider */
+	.projects-hero .hero-about {
+		margin: 0.4rem auto 0;
+		font-size: 1.05rem;
+		font-style: italic;
+		color: #555;
+		line-height: 1.45;
+		text-align: center;
+		white-space: nowrap;
+		overflow-x: hidden;
+		text-overflow: ellipsis;
+	}
+
+	.projects-hero .hero-divider {
+		width: 340px;
+		margin: 0.8rem auto 0;
+		border: 0;
+		border-top: 1px solid #ddd;
+	}
+
+	/* ─── Container for All Hero Sections ─── */
+	.hero-icon {
+		font-size: 3rem !important;
+		margin-right: 0.1rem;
+		vertical-align: middle;
+		display: inline-block;
+		color: #222;
+	}
+
+	.hero-title {
+		font-size: clamp(2.5rem, 5vw, 4rem);
+		text-transform: uppercase;
+		font-weight: 675;
+		font-family: 'Arial Black', 'Segoe UI', sans-serif;
+		color: #222;
+		margin: 0;
+		line-height: 1.2;
+		display: flex;
+		flex-direction: column;
+		align-items: center; /* key for centering child spans */
+		letter-spacing: 1px;
+	}
+
+	.hero-title .line-one,
+	.hero-title .line-two {
+		display: block;
+  		font-weight: inherit;         /* inherit bold from .hero-title */
+  		text-transform: uppercase;   /* optional: for full caps like WORK EXPERIENCE */
+		text-align: center;
+	}
+
+	.line-one,
+	.line-two {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
+
+	.hero-about {
+		font-size: 1.05rem;
+		font-style: italic;
+		color: #555;
+		line-height: 1.45;
+		margin-top: 4.8rem;
+	}
+
+	/* headline stays fluid but tops out slightly smaller */
+	#intro h1{
+		font-size: clamp(3rem, 6vw + 0.5rem, 4.8rem); /* was 5.5rem */
+	}
+
 	/* ───────────────────  RESPONSIVE (<640 px)  ───────────────── */
-	@media(max-width:640px){
+	@media(max-width:640px) {
 		.page-hero .hero-title{ font-size:2.3rem; }
 		.xp-company{ flex-direction:column; gap:.6rem; }
 		.exp-bullets, .role-bullets{ padding-left:1.8rem; }
@@ -145,6 +281,7 @@
 		.xp-role::after{ left:-14px; }
 		.xp-role::before{ left:-17px; }
 	}
+	
 	</style>
 
 </head>
@@ -156,10 +293,12 @@
 
 		<!-- Intro -->
 		<div id="intro">
-			<h1>Hello, I am<br />
-				Mohammed Zakiuddin.</h1>
+			<h1 id="intro-headline">
+				<span class="greet">Hello, I’m</span><br>
+				<span class="name">Mohammed Zakiuddin.</span>
+			</h1>
 			<p>
-				As a graduate student at Texas A&M University-Commerce, I am deepening my expertise in Data Science with a focus on Data Engineering and AI. My passion for technology began at the University of Texas at Arlington, where I earned my Bachelor's in Computer Science.
+				As a graduate student at East Texas A&M University, I am deepening my expertise in Data Science with a focus on Data Engineering and AI. My passion for technology began at the University of Texas at Arlington, where I earned my Bachelor's in Computer Science.
 			</p> 
 			<ul class="actions">
 				<li><a href="#header" class="button icon solid solo fa-arrow-down scrolly">Continue</a></li>
@@ -193,23 +332,19 @@
 		<div id="main">
 
 		<!-- ─── Work-Experience Hero ─────────────────────────────── -->
-		<div class="page-hero">
-			<div class="hero-row">
-				<span class="hero-icon">🧑‍💼</span>
-				<h2 class="hero-title">Work Experience</h2>
-			</div>
-
-			<!-- 2-line About-Me -->
-			<p class="hero-about"
-				style="font-size:1.15rem;font-style:italic;color:#555;line-height:1.45;">
-				Bridging <strong>data engineering</strong> and software craftsmanship to build secure micro-services.<br>
-				Delivering real-time data pipelines that turn vision into scalable products.
-			</p>
-
-
-
-			<hr class="hero-divider" />
+		<div class="page-hero" id="xp-hero">
+		<div class="hero-row">
+			<span class="hero-icon">🧑‍💼</span>
+			<h2 class="hero-title">Work Experience</h2>
 		</div>
+
+		<p class="hero-about">
+			Bridging <strong>data engineering</strong> and software craftsmanship to build secure micro-services. Delivering real-time data pipelines that turn vision into scalable products.
+		</p>
+
+		<hr class="hero-divider" />
+		</div>
+
 		<!-- ──────────────────────────────────────────────────────── -->
 
 		<!-- ─── EXPERIENCE SECTION ───────────────────────────────────── -->
@@ -296,20 +431,29 @@
 		</section>
 
 		<!-- ─── Projects Hero ────────────────────────────────────────── -->
-		<div class="page-hero projects-hero">
-		<div class="hero-row">
-			<!-- pick any Font-Awesome icon you like; here I used fa-laptop-code -->
+		<!-- <div class="container">
+			<div class="page-hero sdp-hero">
+				<div class="hero-row">
+					<span class="hero-icon"><i class="fa-solid fa-code-branch"></i></span>
+					<h2 class="hero-title">Software Development Projects</h2>
+				</div>
+				<p class="hero-about">
+					Turning ideas into robust, user-centred applications one repo at a time.
+				</p>
+				<hr class="hero-divider" />
+			</div>
+		</div> -->
+
+		<div class="sdp-hero">
+		<h2 class="hero-title">
+			<span class="line-one">
 			<span class="hero-icon"><i class="fa-solid fa-code-branch"></i></span>
-			<h2 class="hero-title">Software Development Projects</h2>
+			Software
+			</span>
+			<span class="line-two">Development Projects</span>
+		</h2>
 		</div>
 
-		<!-- short, professional tagline -->
-		<p class="hero-about">
-			Turning ideas into robust, user-centred applications one repo at a time.
-		</p>
-
-		<hr class="hero-divider" />
-		</div>
 		<!-- ──────────────────────────────────────────────────────────── -->
 			<!-- Featured Post -->
 			<article class="post featured">
@@ -518,7 +662,6 @@
                         </li>
                     </ul>
                 </footer>
-
 		</div>
 
 		<!-- Footer -->
