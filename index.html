@@ -62,7 +62,6 @@
 		margin-bottom: 0.3rem;       /* ⬅️ Tighter gap under title */
 	}
 
-
 	.page-hero .hero-icon {
 		font-size: clamp(2.1rem, 4.2vw, 3.4rem); /* slightly smaller */
 		line-height: 1;
@@ -87,7 +86,6 @@
 		text-align: center;
 		white-space: normal; /* allows wrapping only when necessary */
 	}
-
 
 	.page-hero .hero-divider {
 		width: 340px;
@@ -145,10 +143,18 @@
 	.role-item h4{ margin:0; font-size:.95rem; font-weight:700; }
 	.role-dates{ display:block; margin:.15rem 0 .8rem; font-size:.8rem; color:#666; }
 
+	.role-bullets {
+		text-align: justify;
+	}
+
+	.exp-bullets{
+		text-align: justify;
+	}
+
 	/* ── bullets (ALL role lists) ───────────────────────────────── */
 	.exp-bullets, .role-bullets{ margin:0 0 .6rem; padding-left:3rem; }
 	.exp-bullets li, .role-bullets li{
-		font-size:.95rem; line-height:1.55; margin:0 0 .45rem;
+		font-size:.85rem; line-height:1.5; margin:0 0 .45rem;
 	}
 	.exp-bullets li::marker, .role-bullets li::marker{
 		color:#3d3d3d; font-size:.95rem;
@@ -367,14 +373,14 @@
 
 				<li class="role-item">
 				<h4>Associate Software Engineer</h4>
-				<span class="role-dates">Jun 2025 – Present · 1 mo</span>
+				<span class="role-dates">Jun 2025 – Present · 2 mos</span>
 
 				<!-- Associate Software Engineer (current role) -->
-				<ul class="exp-bullets">
-					<li>Refactored legacy modules into <strong>Spring Boot</strong> micro-services, cutting deployment time by 35 %.</li>
+				<!-- <ul class="exp-bullets">
+					<li>Refactored legacy modules into <strong>Spring Boot</strong> microservices, cutting deployment time by 35%.</li>
 					<li>Built a <strong>Kafka</strong> event pipeline that reduced invoice-processing latency from minutes to seconds.</li>
-					<li>Automated CI/CD with <strong>Azure DevOps</strong> &nbsp;→ on-demand releases and zero-downtime patches.</li>
-				</ul>		
+					<li>Automated CI/CD with <strong>Azure DevOps</strong> for on-demand releases and zero-downtime patches.</li>
+				</ul> -->
 
 				</li>
 
@@ -383,12 +389,15 @@
 				<span class="role-dates">Dec 2024 – May 2025 · 6 mos</span>
 
 				<ul class="role-bullets">
-					<li>Migrated legacy <strong>.NET</strong> APIs to <strong>Java Spring Boot</strong> with a multi-layered micro-service architecture.</li>
-					<li>Enhanced system reliability with a <strong>Kafka</strong> event-driven pipeline.</li>
-					<li>Secured endpoints using <strong>OAuth2</strong> / <strong>JWT</strong> and automated CI/CD in <strong>Azure DevOps</strong>.</li>
+					<li>Modernized legacy <strong>.NET</strong> APIs by migrating to <strong>Java Spring Boot</strong>, deploying a modular microservices architecture (controllers, services, DAOs, mappers) that improved code reuse and scalability.</li>
+					<li>Delivered <strong>Zakat, Tax and Customs Authority (ZATCA) Phase-2 E-Invoicing</strong> compliance by integrating <strong>Fatoora REST APIs</strong>, ensuring seamless and real-time electronic tax reporting.</li>
+					<li>Secured REST APIs using <strong>OAuth2</strong> and <strong>JWT</strong>, enforcing access control policies and safeguarding financial data.</li>
+					<li>Engineered a <strong>Kafka</strong>-based, event-driven notification system that enabled real-time invoice processing and improved system responsiveness.</li>
+					<li>Streamlined data access by integrating <strong>Oracle Database</strong> with <strong>MyBatis</strong>, optimizing complex SQL queries and improving transaction performance.</li>
+					<li>Enhanced Agile delivery through <strong>Azure DevOps</strong>, managing Git repositories, sprint workflows, and automating CI/CD pipelines for rapid, zero-downtime deployments.</li>
 				</ul>
 
-				<p class="role-skills">💎 Server-Side Programming · REST APIs + 9 skills</p>
+				<p class="role-skills">💎 Java · Spring Boot · REST APIs · Server-Side Programming + 9 skills</p>
 				</li>
 
 			</ul>
@@ -414,11 +423,14 @@
 				<span class="role-dates">Jun 2022 – Aug 2022 · 3 mos</span>
 
 				<ul class="role-bullets">
-					<li>Developed survey-analysis web app with <strong>ASP.NET & C#</strong>.</li>
-					<li>Created interactive dashboards in <strong>SSRS</strong> to improve decision-making.</li>
+					<li>Developed and deployed robust software solutions using <strong>.NET</strong>, with a focus on quality, scalability, and maintainability.</li>
+					<li>Specialized in <strong>C#</strong>, <strong>Microsoft SQL Server</strong>, <strong>jQuery</strong>, <strong>CSS</strong>, and <strong>HTML</strong> for building responsive, data-driven web applications.</li>
+					<li>Led the end-to-end development of a survey analysis web app for DAR, increasing employee satisfaction by 50% and retention by 20%.</li>
+					<li>Built a dynamic reporting system using <strong>SSRS</strong>, reducing survey processing time by 40% and improving data accuracy by 25% through automated dashboards.</li>
+					<li>Committed to delivering business value by combining technical proficiency with proactive problem-solving in fast-paced environments.</li>
 				</ul>
 
-				<p class="role-skills">💎 C#, CSS, HTML + 5 skills</p>
+				<p class="role-skills">💎 C# · ASP.NET · Microsoft SQL Server · JavaScript · CSS3 · HTML5</p>
 				</li>
 
 			</ul>
@@ -668,10 +680,10 @@
 				
 				<article>
 					<header>
-						<h2>Serveme System Android Application</h2>
+						<h2>SpringBoot x OpenAI</h2>
 					</header>
 					<a href="https://github.com/Pistonamey/ServeMe-System-Application " class="image main"><img
-							src="images/serve_me.png" alt="" /></a>
+							src="images/spring-ai-integration-diagram.png" alt="" /></a>
 					<p>This is an Android application that
 						connects customers who need to repair their
 						home appliances to vendors that provide the
