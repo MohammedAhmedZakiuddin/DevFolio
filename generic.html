@@ -70,6 +70,27 @@ p, a, li, blockquote, dt, dd, span, div{
     background:#0f1b24;color:#fff;
 }
 
+.posts {
+	margin-top: 1rem !important;  /* Reduce top space between sections */
+}
+
+.post.featured {
+	margin-top: 1 !important;     /* If there's margin on this element */
+	padding-top: 0 !important;    /* And padding, remove that too */
+}
+
+.section-hero + .post.featured {
+	margin-top: 2.2rem;  /* You can adjust this to 1.8rem or 2.5rem if needed */
+}
+
+header.major h2 {
+	font-size: 2.5rem;
+	font-weight: 800;
+	line-height: 1.4;
+	text-align: center;
+	margin-top: 2rem;
+}
+
 /* ---------- (Prev/Next pager untouched) ------- */
 </style>
 
@@ -122,40 +143,117 @@ p, a, li, blockquote, dt, dd, span, div{
 			<hr style="margin:1rem auto 0;width:380px;">
 		</header>
 
+		<!-- Featured Post: Graphs and Reachability -->
+		<article class="post featured">
+			<header class="major">
+				<h2 style="margin-top: 2rem; text-align: center; font-weight: 500; font-size: 2.5rem; line-height: 1.4;">
+					<a href="https://github.com/Pistonamey/DS-ALGO_Graph_and_Reachability" target="_blank" style="color: inherit; text-decoration: none;">
+						GRAPHS AND REACHABILITY<br />
+						MINIMAL RIGIDITY CHECKER<br />
+						(PEBBLE GAME)
+					</a>
+				</h2>
+			</header>
 
+			<a href="https://github.com/Pistonamey/DS-ALGO_Graph_and_Reachability" target="_blank" class="image fit">
+				<img src="images/Pebble_game.png" alt="Pebble Game Graph Visual" />
+			</a>
+
+			<p>
+				This C project implements the <strong>"pebble game"</strong> algorithm to test whether a given undirected graph is <em>minimally rigid</em> in 2D space.
+				It's useful in applications involving structural engineering, constraint systems, and rigidity verification.
+			</p>
+
+			<p style="margin-bottom: 0;"><strong style="font-size: 1.2rem;">KEY FEATURES:</strong></p>
+			<ul style="text-align: left; margin-top: 0.3rem;">
+				<li>Reads graph input from a <code>.dat</code> file (number of vertices + edge list)</li>
+				<li>Constructs an undirected graph using adjacency lists for efficient traversal</li>
+				<li>Assigns two pebbles to each vertex and simulates the pebble game algorithm</li>
+				<li>Checks if the graph is <strong>Laman minimally rigid</strong> or contains redundant edges</li>
+				<li>Prints edge processing feedback step-by-step</li>
+				<li>Manages dynamic memory for all vertices and edges during runtime</li>
+			</ul>
+
+			<p style="margin-bottom: 0;"><strong style="font-size: 1.2rem;">HOW TO RUN:</strong></p>
+			<ol style="text-align: left;">
+				<li>Compile the program:<br />
+					<code>gcc -o pebble_game graph_reachability.c</code>
+				</li>
+				<li>Run the executable:<br />
+					<code>./pebble_game a.dat</code>
+				</li>
+				<li>Ensure <code>a.dat</code> contains the number of vertices followed by edge pairs</li>
+			</ol>
+
+			<style>
+				.sample-box {
+					background: #f8f8f8;
+					border-radius: 6px;
+					padding: 1.2rem 1.4rem;
+					margin-bottom: 1.4rem;
+					font-family: 'Courier New', monospace;
+					font-size: 1rem;
+					line-height: 1.6;
+					text-align: left;
+					width: fit-content;
+					max-width: 100%;
+				}
+			</style>
+
+			<p><strong>Sample Input (a.dat):</strong></p>
+			<div class="sample-box">
+			6<br>
+			0 1<br>
+			1 2<br>
+			2 3<br>
+			3 4<br>
+			4 5<br>
+			5 0<br>
+			1 4<br>
+			0 4<br>
+			1 3
+			</div>
+
+			<p><strong>The first number <code>6</code></strong> indicates the number of vertices. Each following line defines an undirected edge between two nodes.</p>
+
+			<p><strong>Sample Output:</strong></p>
+			<div class="sample-box">
+			0 1<br>
+			1 2<br>
+			2 3<br>
+			3 4<br>
+			4 5<br>
+			5 0<br>
+			1 4<br>
+			0 4<br>
+			1 3
+			</div>
+
+			<p style="margin-bottom: 0;"><strong style="font-size: 1.2rem;">FUTURE IMPROVEMENTS:</strong></p>
+			<ul style="text-align: left;">
+				<li>Add logic to detect and flag redundant edges programmatically</li>
+				<li>Print vertex movement path while pebble search is performed</li>
+				<li>Integrate with Graphviz for real-time graph visualizations</li>
+			</ul>
+
+			<p style="margin-bottom: 0;"><strong style="font-size: 1.2rem;">CONCEPTS USED:</strong></p>
+			<ul style="text-align: left;">
+				<li>Graph Theory (adjacency lists, undirected edges)</li>
+				<li>Pebble Game Algorithm</li>
+				<li>Dynamic Memory Allocation</li>
+				<li>File I/O and command-line parsing in C</li>
+			</ul>
+
+			<ul class="actions special">
+				<li>
+					<a href="https://github.com/Pistonamey/DS-ALGO_Graph_and_Reachability" target="_blank" class="button">View Project</a>
+				</li>
+			</ul>
+		</article>
 
 			<!-- Post -->
 			<section class="posts">
 
-				<article>
-					<header>
-						<h2><a href="http://visualize-djikstra.netlify.app" target="_blank">Pathfinding Visualizer<br />
-							</a></h2>
-					</header>
-					<a href="http://visualize-djikstra.netlify.app" target="_blank" class="image fit"><img
-							src="images/dijkstras.png" alt="" /></a>
-					<p> Developed a Pathfinder Visualizer that finds the shortest path using the dijkstra's algorithm
-						using ReactJS and deployed using S3.</p>
-					<ul class="actions special">
-						<li><a href="http://visualize-djikstra.netlify.app" target="_blank" class="button">View
-								Project</a></li>
-					</ul>
-				</article>
-				<article>
-					<header>
-						<h2><a href="https://github.com/Pistonamey/DS-ALGO_Graph_and_Reachability" target="blank">Graphs
-								and<br />
-								Reachability</a></h2>
-					</header>
-					<a href="https://github.com/Pistonamey/DS-ALGO_Graph_and_Reachability" target="blank"
-						class="image fit"><img src="images/pebble.png" alt="" /></a>
-					<p> C program that uses the “pebble game” technique to test if an input graph is minimally rigid (in
-						two dimensions). </p>
-					<ul class="actions special">
-						<li><a href="https://github.com/Pistonamey/DS-ALGO_Graph_and_Reachability" target="blank"
-								class="button">Github Repository</a></li>
-					</ul>
-				</article>
 				<article>
 					<header>
 						<h2><a href="https://github.com/MohammedAhmedZakiuddin/MandelBrot" target="_blank">MandelBrot Threading<br /></a></h2>
@@ -180,6 +278,7 @@ p, a, li, blockquote, dt, dd, span, div{
 						</li>
 					</ul>
 				</article>
+
 				<article>
 					<header>
 						<h2><a href="https://github.com/MohammedAhmedZakiuddin/FAT32-FileSystem">32 Bit FAT System</a></h2>
@@ -209,6 +308,7 @@ p, a, li, blockquote, dt, dd, span, div{
 						<li><a href="https://github.com/MohammedAhmedZakiuddin/FAT32-FileSystem" target="_blank" class="button">Github Repository</a></li>
 					</ul>
 				</article>
+
 				<article>
 					<header>
 						<h2><a href="https://github.com/MohammedAhmedZakiuddin/ArenaAllocator" target="blank">First Fit & Next Fit Memory Allocation</a></h2>
