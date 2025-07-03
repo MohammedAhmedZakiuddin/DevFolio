@@ -272,6 +272,37 @@
 		margin-top: 4.8rem;
 	}
 
+	.button.github-btn {
+	display: inline-flex !important;
+	align-items: center !important;
+	gap: 0.4rem !important;
+	padding: 0.35rem 2.3rem !important;           /* wider width */
+	border: 0.2px solid #0f1b24 !important; 
+	background: transparent !important;
+	color: #0f1b24 !important;
+	font-weight: 700 !important;
+	font-size: 0.82rem !important;
+	letter-spacing: 0.4px !important;
+	text-transform: uppercase !important;
+	text-decoration: none !important;
+	transition: all 0.25s ease !important;
+	font-family: 'Inter', sans-serif !important;
+	}
+
+	.button.github-btn i {
+	font-size: 0.85rem !important;
+	}
+
+	.button.github-btn:hover {
+	background-color: #0f1b24 !important;
+	color: #00bfff !important;
+	border-color: #00bfff !important;
+	}
+
+	.button.github-btn:hover i {
+	color: #00bfff !important;
+	}
+
 	/* headline stays fluid but tops out slightly smaller */
 	#intro h1{
 		font-size: clamp(3rem, 6vw + 0.5rem, 4.8rem); /* was 5.5rem */
@@ -438,23 +469,7 @@
 
 		</article>
 
-		<!-- add more <article class="xp-company"> … </article> blocks as needed -->
-
 		</section>
-
-		<!-- ─── Projects Hero ────────────────────────────────────────── -->
-		<!-- <div class="container">
-			<div class="page-hero sdp-hero">
-				<div class="hero-row">
-					<span class="hero-icon"><i class="fa-solid fa-code-branch"></i></span>
-					<h2 class="hero-title">Software Development Projects</h2>
-				</div>
-				<p class="hero-about">
-					Turning ideas into robust, user-centred applications one repo at a time.
-				</p>
-				<hr class="hero-divider" />
-			</div>
-		</div> -->
 
 		<div class="sdp-hero">
 		<h2 class="hero-title">
@@ -480,7 +495,11 @@
 					stream any song for free from 4 charts and 14 different genres. You can also view the Lyrics for
 					every song. </p>
 				<ul class="actions special">
-					<li><a href="http://songstop-amey.netlify.app" target="_blank" class="button">Checkout</a></li>
+					<li>
+						<a href="http://songstop-amey.netlify.app" class="button github-btn" target="_blank">
+							<i class="fab fa-github"></i> Checkout
+						</a>
+					</li>
 				</ul>
 			</article>
 
@@ -499,8 +518,10 @@
 
 					</p>
 					<ul class="actions special">
-						<li><a href="https://finatica-amey-shinde.vercel.app/" target="_blank"
-								class="button">Checkout</a>
+						<li>
+							<a href="https://finatica-amey-shinde.vercel.app/" class="button github-btn" target="_blank">
+								<i class="fab fa-github"></i> Github
+							</a>
 						</li>
 					</ul>
 				</article>
@@ -517,7 +538,10 @@
 					<p> This is a Movie Database application made with ReactJS, Tailwind CSS, and Firebase Firestore
 						using TMDB API. Deployed and hosted with Firebase. </p>
 					<ul class="actions special">
-						<li><a href="https://vixie.netlify.app" target="_blank" class="button">Checkout</a>
+						<li>
+							<a href="https://vixie.netlify.app" class="button github-btn" target="_blank">
+								<i class="fab fa-github"></i> Github
+							</a>
 						</li>
 					</ul>
 				</article>
@@ -531,8 +555,10 @@
 							src="images/admin-dash.png" alt="" /></a>
 					<p> React Admin Dashboard - Material UI, Nivo Charts, Formik, Yup, and FullCalendar </p>
 					<ul class="actions special">
-						<li><a href="https://administration-site.netlify.app/" target="_blank"
-								class="button">Checkout</a>
+						<li>
+							<a href="https://administration-site.netlify.app/" class="button github-btn" target="_blank">
+								<i class="fab fa-github"></i> Github
+							</a>
 						</li>
 					</ul>
 				</article>
@@ -549,8 +575,10 @@
 					<p> E-Commerce Application developed with TypeScript, Sanity, NextJS with Stripe Payments
 						integration. </p>
 					<ul class="actions special">
-						<li><a href="https://ecommerce-stripe-pi.vercel.app/" target="_blank"
-								class="button">Checkout</a>
+						<li>
+							<a href="https://ecommerce-stripe-pi.vercel.app/" class="button github-btn" target="_blank">
+								<i class="fab fa-github"></i> Github
+							</a>
 						</li>
 					</ul>
 				</article>
@@ -567,10 +595,14 @@
 						Deployed and
 						hosted with Amazon S3 webpages. </p>
 					<ul class="actions special">
-						<li><a href="https://cryptinfo-amey.netlify.app" target="_blank" class="button">Checkout</a>
+						<li>
+							<a href="https://cryptinfo-amey.netlify.app" class="button github-btn" target="_blank">
+								<i class="fab fa-github"></i> Github
+							</a>
 						</li>
 					</ul>
 				</article>
+
 				<article>
 					<header>
 						<h2><a href="https://price-vision.herokuapp.com/" target="_blank">Price Vision - Real
@@ -588,10 +620,14 @@
 						Learn,
 						NumPy.</p>
 					<ul class="actions special">
-						<li><a href="https://price-vision.herokuapp.com/" target="_blank" class="button">Checkout</a>
+						<li>
+							<a href="https://price-vision.herokuapp.com/" class="button github-btn" target="_blank">
+								<i class="fab fa-github"></i> Github
+							</a>
 						</li>
 					</ul>
 				</article>
+
 				<article>
 					<header>
 						<h2><a href="https://lucky-florentine-1a6660.netlify.app/" target="_blank">Chat
@@ -605,10 +641,14 @@
 						Engine API
 					</p>
 					<ul class="actions special">
-						<li><a href="https://lucky-florentine-1a6660.netlify.app/" target="_blank"
-								class="button">Checkout</a></li>
+						<li>
+							<a href="https://lucky-florentine-1a6660.netlify.app/" class="button github-btn" target="_blank">
+								<i class="fab fa-github"></i> Github
+							</a>
+						</li>
 					</ul>
 				</article>
+
 				<article>
 					<header>
 						<h2><a href="https://github.com/Pistonamey/airbnb" target="_blank">Airbnb Experiences
@@ -621,7 +661,10 @@
 						ReactJS.
 					</p>
 					<ul class="actions special">
-						<li><a href="https://github.com/Pistonamey/airbnb" target="_blank" class="button">Checkout</a>
+						<li>
+							<a href="https://github.com/Pistonamey/airbnb" class="button github-btn" target="_blank">
+								<i class="fab fa-github"></i> Github
+							</a>
 						</li>
 					</ul>
 				</article>
@@ -674,7 +717,9 @@
 
 					<ul class="actions special" style="text-align: left;">
 						<li>
-							<a href="https://github.com/MohammedAhmedZakiuddin/springboot-api-docker-postgres-guide" target="_blank" class="button">GitHub Repository</a>
+							<a href="https://github.com/MohammedAhmedZakiuddin/springboot-api-docker-postgres-guide" class="button github-btn" target="_blank">
+								<i class="fab fa-github"></i> Github
+							</a>
 						</li>
 					</ul>
 				</article>
@@ -731,8 +776,11 @@
 
 
 					<ul class="actions special">
-						<li><a href="https://github.com/MohammedAhmedZakiuddin/FullStack_SpringBootApplication/tree/master" target="_blank"
-								class="button large">Github Repository</a></li>
+						<li>
+							<a href="https://github.com/MohammedAhmedZakiuddin/FullStack_SpringBootApplication/tree/master" class="button github-btn" target="_blank">
+								<i class="fab fa-github"></i> github
+							</a>
+						</li>
 					</ul>
 				</article>
 
