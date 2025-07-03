@@ -79,6 +79,7 @@
 	color:#0f1b24 !important; box-shadow:none !important;
 	transition:all .25s ease;
 	}
+
 	.posts .actions.special .button:hover,
 	.pagination a.previous:hover,
 	.pagination a.next:hover,
@@ -96,7 +97,39 @@
 	.pagination a.previous::before{ content:"\2190"; margin-right:.75rem; }
 	.pagination a.next::after   { content:"\2192"; margin-left :.75rem; }
 
-	/* (Everything else on the page keeps its existing styles) */
+	.button.github-btn {
+		display: inline-flex !important;
+		align-items: center !important;
+		gap: 0.4rem !important;
+		padding: 0.35rem 2.2rem !important;  /* wider button */
+		border: 1px solid #0f1b24 !important;
+		background: transparent !important;
+		color: #0f1b24 !important;
+		font-weight: 700 !important;
+		font-size: 0.82rem !important;
+		letter-spacing: 0.4px !important;
+		text-transform: uppercase !important;
+		text-decoration: none !important;
+		transition: all 0.25s ease !important;
+		font-family: 'Inter', sans-serif !important;
+	}
+
+	/* GitHub icon style (default) */
+	.button.github-btn i {
+		font-size: 0.85rem !important;
+	}
+
+	/* MATCH the second image (hover = dark bg, bright blue border + icon/text) */
+	.posts .actions.special .button.github-btn:hover {
+		background-color: #0f1b24 !important;       /* dark base */
+		color: #00bfff !important;                   /* bright blue text */
+		border-color: #00bfff !important;            /* bright blue border */
+	}
+
+	.posts .actions.special .button.github-btn:hover i {
+		color: #00bfff !important;                   /* icon bright blue too */
+	}
+
 	</style>
 
 </head>
@@ -156,8 +189,11 @@
 					class="image fit"><img src="images/uber.png" alt="Uber ETL" /></a>
 					<p>Analyze Uber data using GCP Storage, Python, Mage pipelines, BigQuery &amp; Looker Studio.</p>
 					<ul class="actions special">
-						<li><a href="https://github.com/Pistonamey/uber_data_etl" target="_blank"
-							class="button">GitHub Repository</a></li>
+						<li>
+							<a href="https://github.com/Pistonamey/uber_data_etl" target="_blank" class="button github-btn">
+								<i class="fab fa-github"></i> GitHub
+							</a>
+						</li>
 					</ul>
 				</article>
 
@@ -170,8 +206,11 @@
 					class="image fit"><img src="images/Architecture.jpg" alt="Kafka Architecture" /></a>
 					<p>End-to-end real-time stock-market pipeline with Python, AWS, Apache Kafka, Glue, Athena &amp; SQL.</p>
 					<ul class="actions special">
-						<li><a href="https://github.com/Pistonamey/kafka_stock_analysis" target="_blank"
-							class="button">GitHub Repository</a></li>
+						<li>
+							<a href="https://github.com/Pistonamey/kafka_stock_analysis" target="_blank" class="button github-btn">
+								<i class="fab fa-github"></i> GitHub
+							</a>
+						</li>
 					</ul>
 				</article>
 

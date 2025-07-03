@@ -47,8 +47,22 @@ p, a, li, blockquote, dt, dd, span, div{
 
 /* ---------- PROJECT TITLES -------------------- */
 .posts h2,
-.posts h2 a{
-    font-weight:800;letter-spacing:.04em;color:#0f1b24;
+.posts h2 a {
+    font-weight: 600;             /* Match DE project's boldness */
+    font-size: 1.7rem;            /* Slightly smaller for subtlety */
+    letter-spacing: 0.5px;
+    text-transform: uppercase;    /* Make it ALL CAPS */
+    color: #0f1b24;
+}
+
+.posts .actions.special .button.github-btn {
+    border: 0.8px solid #333 !important;  /* lighter than #0f1b24 */
+}
+
+.posts h3 {
+    font-weight: 600;       /* Less bold */
+    font-size: 1.2rem;      /* Adjust size as needed */
+    margin-top: 1.2rem;
 }
 
 /* ---------- PROJECT BUTTONS ------------------- */
@@ -82,6 +96,76 @@ p, a, li, blockquote, dt, dd, span, div{
 .section-hero + .post.featured {
 	margin-top: 2.2rem;  /* You can adjust this to 1.8rem or 2.5rem if needed */
 }
+
+.button.github-btn {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	gap: 0.4rem;
+	padding: 0.5rem 1.5rem;
+	min-width: auto;
+	border: 1px solid #0f1b24;
+	background: transparent;
+	color: #0f1b24;
+	font-weight: 700;
+	font-size: 0.82rem;
+	letter-spacing: 0.4px;
+	text-transform: uppercase;
+	text-decoration: none;
+	transition: all 0.25s ease;
+	font-family: 'Inter', sans-serif;
+	border-radius: 2px;
+}
+
+.button.github-btn i {
+	font-size: 0.85rem;
+	color: inherit;
+}
+
+.button.github-btn:hover {
+	background-color: #0f1b24;
+	color: #00bfff;                          /* Bright hover */
+	border-color: #00bfff;
+}
+
+.posts .actions.special .button.github-btn {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	gap: 0.4rem;
+
+	padding: 0.6rem 2.1rem;  /* Adjusted length */
+	min-width: 160px;        /* Force consistent width */
+	border: 1px solid #333;  /* Light, subtle border */
+	background: transparent;
+	color: #0f1b24;
+
+	font-weight: 700;
+	font-size: 0.82rem;
+	letter-spacing: 0.4px;
+	text-transform: uppercase;
+	text-decoration: none;
+	transition: all 0.25s ease;
+	font-family: 'Inter', sans-serif;
+	border-radius: 3px;
+	box-shadow: none;        /* Remove bold look */
+}
+
+.posts .actions.special .button.github-btn i {
+	font-size: 0.85rem;
+	color: inherit;
+}
+
+.posts .actions.special .button.github-btn:hover {
+	background-color: #0f1b24;
+	color: #00bfff;
+	border-color: #00bfff;
+}
+
+.posts .actions.special .button.github-btn:hover i {
+	color: #00bfff;
+}
+
 
 header.major h2 {
 	font-size: 2.5rem;
@@ -143,116 +227,6 @@ header.major h2 {
 			<hr style="margin:1rem auto 0;width:380px;">
 		</header>
 
-		<!-- Featured Post: Graphs and Reachability -->
-		<article class="post featured">
-			<header class="major">
-				<h2 style="margin-top: 2rem; text-align: center; font-weight: 500; font-size: 2.5rem; line-height: 1.4;">
-					<a href="https://github.com/MohammedAhmedZakiuddin/PebbleGame" target="_blank" style="color: inherit; text-decoration: none;">
-						GRAPHS AND REACHABILITY<br />
-						MINIMAL RIGIDITY CHECKER<br />
-						(PEBBLE GAME)
-					</a>
-				</h2>
-			</header>
-
-			<a href="https://github.com/MohammedAhmedZakiuddin/PebbleGame" target="_blank" class="image fit">
-				<img src="images/Pebble_game.png" alt="Pebble Game Graph Visual" />
-			</a>
-
-			<p>
-				C program that uses the <strong>“pebble game”</strong> technique to test if an input graph is <em>minimally rigid</em> (in two dimensions). 
-				The first line of the input is <code>n</code>, the number of vertices (≤ 100). The next <code>2n – 3</code> lines define undirected edges. 
-				Input lines are echoed to output before processing. The final output indicates if the graph is <strong>Laman</strong> or if the last edge is 
-				<strong>redundant</strong>, along with the rigid subgraph. If a pebble is moved, the path of vertices is printed.
-			</p>
-
-			<p style="margin-bottom: 0;"><strong style="font-size: 1.2rem;">KEY FEATURES:</strong></p>
-			<ul style="text-align: left; margin-top: 0.3rem;">
-				<li>Reads graph input from a <code>.dat</code> file (number of vertices + edge list)</li>
-				<li>Constructs an undirected graph using adjacency lists for efficient traversal</li>
-				<li>Assigns two pebbles to each vertex and simulates the pebble game algorithm</li>
-				<li>Checks if the graph is <strong>Laman minimally rigid</strong> or contains redundant edges</li>
-				<li>Prints edge processing feedback step-by-step</li>
-				<li>Manages dynamic memory for all vertices and edges during runtime</li>
-			</ul>
-
-			<p style="margin-bottom: 0;"><strong style="font-size: 1.2rem;">HOW TO RUN:</strong></p>
-			<ol style="text-align: left;">
-				<li>Compile the program:<br />
-					<code>gcc -o pebble_game graph_reachability.c</code>
-				</li>
-				<li>Run the executable:<br />
-					<code>./pebble_game a.dat</code>
-				</li>
-				<li>Ensure <code>a.dat</code> contains the number of vertices followed by edge pairs</li>
-			</ol>
-
-			<style>
-				.sample-box {
-					background: #f8f8f8;
-					border-radius: 6px;
-					padding: 1.2rem 1.4rem;
-					margin-bottom: 1.4rem;
-					font-family: 'Courier New', monospace;
-					font-size: 1rem;
-					line-height: 1.6;
-					text-align: left;
-					width: fit-content;
-					max-width: 100%;
-				}
-			</style>
-
-			<p><strong>Sample Input (a.dat):</strong></p>
-			<div class="sample-box">
-			6<br>
-			0 1<br>
-			1 2<br>
-			2 3<br>
-			3 4<br>
-			4 5<br>
-			5 0<br>
-			1 4<br>
-			0 4<br>
-			1 3
-			</div>
-
-			<p><strong>The first number <code>6</code></strong> indicates the number of vertices. Each following line defines an undirected edge between two nodes.</p>
-
-			<p><strong>Sample Output:</strong></p>
-			<div class="sample-box">
-			0 1<br>
-			1 2<br>
-			2 3<br>
-			3 4<br>
-			4 5<br>
-			5 0<br>
-			1 4<br>
-			0 4<br>
-			1 3
-			</div>
-
-			<p style="margin-bottom: 0;"><strong style="font-size: 1.2rem;">FUTURE IMPROVEMENTS:</strong></p>
-			<ul style="text-align: left;">
-				<li>Add logic to detect and flag redundant edges programmatically</li>
-				<li>Print vertex movement path while pebble search is performed</li>
-				<li>Integrate with Graphviz for real-time graph visualizations</li>
-			</ul>
-
-			<p style="margin-bottom: 0;"><strong style="font-size: 1.2rem;">CONCEPTS USED:</strong></p>
-			<ul style="text-align: left;">
-				<li>Graph Theory (adjacency lists, undirected edges)</li>
-				<li>Pebble Game Algorithm</li>
-				<li>Dynamic Memory Allocation</li>
-				<li>File I/O and command-line parsing in C</li>
-			</ul>
-
-			<ul class="actions special">
-				<li>
-					<a href="https://github.com/MohammedAhmedZakiuddin/PebbleGame" target="_blank" class="button">View Project</a>
-				</li>
-			</ul>
-		</article>
-
 			<!-- Post -->
 			<section class="posts">
 
@@ -274,9 +248,40 @@ header.major h2 {
 						<li>Customizable thread count with <code>-n</code> argument.</li>
 						<li>Each thread works on separate image bands for optimal efficiency.</li>
 					</ul>
+
 					<ul class="actions special" style="text-align: left;">
 						<li>
-							<a href="https://github.com/MohammedAhmedZakiuddin/MandelBrot" target="_blank" class="button">Github Repository</a>
+							<a href="https://github.com/MohammedAhmedZakiuddin/MandelBrot" class="button github-btn" target="_blank">
+								<i class="fab fa-github"></i> GITHUB
+							</a>
+						</li>
+					</ul>
+				</article>
+
+				<article>
+					<header>
+						<h2><a href="https://github.com/MohammedAhmedZakiuddin/JohnsonRule" target="blank">Greedy Algorithms<br />Johnson's Rule</a></h2>
+					</header>
+					<a href="https://github.com/MohammedAhmedZakiuddin/JohnsonRule" target="blank" class="image fit">
+						<img src="images/johnsons.png" alt="Johnson's Rule for Two-Stage Production Scheduling" />
+					</a>
+					<p style="text-align: left;">
+						This project demonstrates the implementation of <strong>Johnson's Rule</strong>, a simple yet effective <strong>greedy algorithm</strong> to optimally solve the two-stage production (flow) scheduling problem. By minimizing production time and ensuring efficient workflow, Johnson's Rule provides an ideal solution for scheduling in manufacturing and other production environments.
+					</p>
+					<h3 style="text-align: left;">Key Features:</h3>
+					<ul style="text-align: left;">
+						<li>Uses a greedy method to find optimal scheduling sequences for two-stage production systems.</li>
+						<li>Minimizes production time and ensures efficient utilization of resources.</li>
+						<li>Offers a systematic step-by-step process to arrange tasks based on processing times.</li>
+					</ul>
+					<p style="text-align: left;">
+						Perfect for solving real-world scheduling problems in industries, Johnson's Rule provides clarity and efficiency by sorting tasks in an optimal sequence based on specific processing times at two distinct workstations.
+					</p>
+					<ul class="actions special">
+						<li>
+							<a href="https://github.com/MohammedAhmedZakiuddin/JohnsonRule" class="button github-btn" target="_blank">
+								<i class="fab fa-github"></i> GITHUB
+							</a>
 						</li>
 					</ul>
 				</article>
@@ -307,7 +312,11 @@ header.major h2 {
 						<em>Email for access to disk image (FAT32.img).</em>
 					</p>
 					<ul class="actions special">
-						<li><a href="https://github.com/MohammedAhmedZakiuddin/FAT32-FileSystem" target="_blank" class="button">Github Repository</a></li>
+						<li>
+							<a href="https://github.com/MohammedAhmedZakiuddin/FAT32-FileSystem" class="button github-btn" target="_blank">
+								<i class="fab fa-github"></i> GITHUB
+							</a>
+						</li>
 					</ul>
 				</article>
 
@@ -338,9 +347,14 @@ header.major h2 {
 						Designed for applications with stringent performance requirements, this project showcases how large memory pools are allocated on startup to avoid frequent system calls. Applications like games, aircraft systems, and spacecraft can benefit significantly from this implementation.
 					</p>
 					<ul class="actions special">
-						<li><a href="https://github.com/MohammedAhmedZakiuddin/ArenaAllocator" target="blank" class="button">Github Repository</a></li>
+						<li>
+							<a href="https://github.com/MohammedAhmedZakiuddin/ArenaAllocator" class="button github-btn" target="_blank">
+								<i class="fab fa-github"></i> GITHUB
+							</a>
+						</li>
 					</ul>
 				</article>
+
 				<article>
 					<header>
 						<h2><a href="https://github.com/MohammedAhmedZakiuddin/MavShell" target="blank">MavShell</a></h2>
@@ -370,33 +384,13 @@ header.major h2 {
 					</p>
 					<ul class="actions special">
 						<li>
-							<a href="https://github.com/MohammedAhmedZakiuddin/MavShell" target="blank" class="button">Github Repository</a>
+							<a href="https://github.com/MohammedAhmedZakiuddin/MavShell" class="button github-btn" target="_blank">
+								<i class="fab fa-github"></i> GITHUB
+							</a>
 						</li>
 					</ul>
 				</article>
-				<article>
-					<header>
-						<h2><a href="https://github.com/MohammedAhmedZakiuddin/JohnsonRule" target="blank">Greedy Algorithms<br />Johnson's Rule</a></h2>
-					</header>
-					<a href="https://github.com/MohammedAhmedZakiuddin/JohnsonRule" target="blank" class="image fit">
-						<img src="images/johnsons.png" alt="Johnson's Rule for Two-Stage Production Scheduling" />
-					</a>
-					<p style="text-align: left;">
-						This project demonstrates the implementation of <strong>Johnson's Rule</strong>, a simple yet effective <strong>greedy algorithm</strong> to optimally solve the two-stage production (flow) scheduling problem. By minimizing production time and ensuring efficient workflow, Johnson's Rule provides an ideal solution for scheduling in manufacturing and other production environments.
-					</p>
-					<h3 style="text-align: left;">Key Features:</h3>
-					<ul style="text-align: left;">
-						<li>Uses a greedy method to find optimal scheduling sequences for two-stage production systems.</li>
-						<li>Minimizes production time and ensures efficient utilization of resources.</li>
-						<li>Offers a systematic step-by-step process to arrange tasks based on processing times.</li>
-					</ul>
-					<p style="text-align: left;">
-						Perfect for solving real-world scheduling problems in industries, Johnson's Rule provides clarity and efficiency by sorting tasks in an optimal sequence based on specific processing times at two distinct workstations.
-					</p>
-					<ul class="actions special">
-						<li><a href="https://github.com/MohammedAhmedZakiuddin/JohnsonRule" target="blank" class="button">Github Repository</a></li>
-					</ul>
-				</article>
+
 				<article>
 					<header>
 						<h2><a href="https://github.com/MohammedAhmedZakiuddin/HuffmanCoding" target="blank">Huffman Coding<br />Dynamic Programming</a></h2>
@@ -424,9 +418,65 @@ header.major h2 {
 						Ideal for applications requiring efficient data compression, this implementation showcases the power of dynamic programming in solving optimization problems.
 					</p>
 					<ul class="actions special">
-						<li><a href="https://github.com/MohammedAhmedZakiuddin/HuffmanCoding" target="blank" class="button">Github Repository</a></li>
+						<li>
+							<a href="https://github.com/MohammedAhmedZakiuddin/HuffmanCoding" class="button github-btn" target="_blank">
+								<i class="fab fa-github"></i> GITHUB
+							</a>
+						</li>
 					</ul>
 				</article>
+
+								<article>
+					<header>
+						<h2><a href="https://github.com/MohammedAhmedZakiuddin/PebbleGame" target="_blank">GRAPHS AND REACHABILITY<br />
+						MINIMAL RIGIDITY CHECKER<br />
+						(PEBBLE GAME)<br /></a>
+						</h2>
+					</header>
+					<a href="https://github.com/MohammedAhmedZakiuddin/PebbleGame" target="_blank" class="image fit" style="display: block; text-align: left;">
+						<img src="images/Pebble_game.png" alt="Mandelbrot fractal image" />
+					</a>
+					<p style="text-align: left;">
+						C program that uses the <strong>“pebble game”</strong> technique to test if an input graph is <em>minimally rigid</em> (in two dimensions). 
+						The first line of the input is <code>n</code>, the number of vertices (≤ 100). The next <code>2n – 3</code> lines define undirected edges. 
+						Input lines are echoed to output before processing. The final output indicates if the graph is <strong>Laman</strong> or if the last edge is 
+						<strong>redundant</strong>, along with the rigid subgraph. If a pebble is moved, the path of vertices is printed.
+					</p>
+					<h3 style="text-align: left;">Key Features:</h3>
+					<ul style="text-align: left;">
+						<li>Reads graph input from a <code>.dat</code> file (number of vertices + edge list)</li>
+						<li>Constructs an undirected graph using adjacency lists for efficient traversal</li>
+						<li>Assigns two pebbles to each vertex and simulates the pebble game algorithm</li>
+						<li>Checks if the graph is <strong>Laman minimally rigid</strong> or contains redundant edges</li>
+						<li>Prints edge processing feedback step-by-step</li>
+						<li>Manages dynamic memory for all vertices and edges during runtime</li>
+					</ul>
+					<h3 style="text-align: left;">How to Run:</h3>
+					<ul style="text-align: left;">
+						<li>Compile the program:<br />
+							<code>gcc -o pebble_game graph_reachability.c</code>
+						</li>
+						<li>Run the executable:<br />
+							<code>./pebble_game a.dat</code>
+						</li>
+						<li>Ensure <code>a.dat</code> contains the number of vertices followed by edge pairs</li>
+					</ul>
+					<h3 style="text-align: left;">CONCEPTS USED</h3>
+					<ul style="text-align: left;">
+						<li>Graph Theory (adjacency lists, undirected edges)</li>
+						<li>Pebble Game Algorithm</li>
+						<li>Dynamic Memory Allocation</li>
+						<li>File I/O and command-line parsing in C</li>
+					</ul>
+					<ul class="actions special" style="text-align: left;">
+						<li>
+							<a href="https://github.com/MohammedAhmedZakiuddin/ArenaAllocator" class="button github-btn" target="_blank">
+								<i class="fab fa-github"></i> GITHUB
+							</a>
+						</li>
+					</ul>
+				</article>
+
 			</section>
 			
 			<footer class="section-pagination">
