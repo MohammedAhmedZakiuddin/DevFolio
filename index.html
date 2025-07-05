@@ -272,42 +272,38 @@
 		margin-top: 4.8rem;
 	}
 
-	.button.github-btn {
-		display: inline-flex !important;
-		align-items: center !important;
-		justify-content: center;
-		gap: 0.4rem !important;
-		padding: 0.5rem 2.4rem !important;    /* Comfortable width & height */
-		border: 1px solid #c4c4c4 !important; /* Light grey border */
-		background-color: #f9f9f9 !important; /* Soft light-grey background */
-		color: #0f1b24 !important;
-		font-weight: 700 !important;
-		font-size: 0.82rem !important;
-		letter-spacing: 0.4px !important;
-		text-transform: uppercase !important;
-		text-decoration: none !important;
-		transition: all 0.25s ease !important;
-		font-family: 'Inter', sans-serif !important;
-		border-radius: 2px !important;
-		box-shadow: none !important;
-	}
+.button.github-btn {
+	display: inline-flex !important;
+	align-items: center !important;
+	gap: 0.4rem !important;
+	padding: 0.45rem 2.4rem !important;
+	border: none !important;                    /* kill the old 1 px border   */
+	box-shadow: 0 0 0 0.7px #0f1b24 inset !important;
+	background: #ffffff !important;       /* pure white */
+	color: #0f1b24 !important;
+	font-weight: 700 !important;
+	font-size: 0.82rem !important;
+	letter-spacing: 0.4px !important;
+	text-transform: uppercase !important;
+	text-decoration: none !important;
+	transition: all 0.25s ease !important;
+	font-family: 'Inter', sans-serif !important;
+}
 
-	/* GitHub icon */
-	.button.github-btn i {
-		font-size: 0.85rem !important;
-		color: #0f1b24 !important;
-	}
+.button.github-btn i {
+	font-size: 0.85rem !important;
+	color: inherit !important;
+}
 
-	/* Hover effect (gentle) */
-	.button.github-btn:hover {
-		background-color: #0f1b24 !important;
-		color: #00bfff !important;
-		border-color: #00bfff !important;
-	}
+.button.github-btn:hover {
+	background-color: #0f1b24 !important;
+	color: #00bfff !important;
+	border-color: #00bfff !important;
+}
 
-	.button.github-btn:hover i {
-		color: #00bfff !important;
-	}
+.button.github-btn:hover i {
+	color: #00bfff !important;
+}
 
 
 
