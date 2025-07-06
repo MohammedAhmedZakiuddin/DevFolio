@@ -272,38 +272,49 @@
 		margin-top: 4.8rem;
 	}
 
-.button.github-btn {
-	display: inline-flex !important;
-	align-items: center !important;
-	gap: 0.4rem !important;
-	padding: 0.45rem 2.4rem !important;
-	border: none !important;                    /* kill the old 1 px border   */
-	box-shadow: 0 0 0 0.7px #0f1b24 inset !important;
-	background: #ffffff !important;       /* pure white */
-	color: #0f1b24 !important;
-	font-weight: 700 !important;
-	font-size: 0.82rem !important;
-	letter-spacing: 0.4px !important;
-	text-transform: uppercase !important;
-	text-decoration: none !important;
-	transition: all 0.25s ease !important;
-	font-family: 'Inter', sans-serif !important;
-}
+	.button.github-btn {
+		display: inline-flex !important;
+		align-items: center !important;
+		gap: 0.4rem !important;
+		padding: 0.45rem 2.4rem !important;
+		border: none !important;                    /* kill the old 1 px border   */
+		box-shadow: 0 0 0 0.7px #0f1b24 inset !important;
+		background: #ffffff !important;       /* pure white */
+		color: #0f1b24 !important;
+		font-weight: 700 !important;
+		font-size: 0.82rem !important;
+		letter-spacing: 0.4px !important;
+		text-transform: uppercase !important;
+		text-decoration: none !important;
+		transition: all 0.25s ease !important;
+		font-family: 'Inter', sans-serif !important;
+	}
 
-.button.github-btn i {
-	font-size: 0.85rem !important;
-	color: inherit !important;
-}
+	.button.github-btn i {
+		font-size: 0.85rem !important;
+		color: inherit !important;
+	}
 
-.button.github-btn:hover {
-	background-color: #0f1b24 !important;
-	color: #00bfff !important;
-	border-color: #00bfff !important;
-}
+	.button.github-btn:hover {
+		background-color: #0f1b24 !important;
+		color: #00bfff !important;
+		border-color: #00bfff !important;
+	}
 
-.button.github-btn:hover i {
-	color: #00bfff !important;
-}
+	.button.github-btn:hover i {
+		color: #00bfff !important;
+	}
+
+	.card-h3 {
+		font-size: 1.2rem;          /* smaller than the H2 */
+		font-weight: 405;            /* H2 is 800 — this is one step down */
+		text-transform: uppercase;   /* A U D I O  T R A N S C R I B E R style */
+		letter-spacing: 1.4px;       /* mirrors the H2 spacing */
+		margin: 1.2rem 0 0.6rem;     /* a little breathing room */
+		display: flex;               /* keeps the emoji & text aligned */
+		align-items: center;
+		gap: 0.45rem;
+	}
 
 	/* headline stays fluid but tops out slightly smaller */
 	#intro h1{
@@ -586,48 +597,144 @@
 				</article>
 
 				<article>
-					<header>
-						<h2><a href="https://cryptinfo-amey.netlify.app" target="_blank">CryptInfo -
-								Crypto Currency Tracker<br />
-							</a></h2>
-					</header>
-					<a href="https://cryptinfo-amey.netlify.app" target="_blank" class="image fit"><img
-							src="images/crypto.png" alt="" /></a>
-					<p> A Crypto-Currency Tracker Web application made using React.js and Coin Gecko API.
-						Deployed and
-						hosted with Amazon S3 webpages. </p>
-					<ul class="actions special">
-						<li>
-							<a href="https://cryptinfo-amey.netlify.app" class="button github-btn" target="_blank">
-								<i class="fab fa-github"></i> Github
-							</a>
-						</li>
-					</ul>
+				<header>
+					<h2>
+					<a href="https://github.com/MohammedAhmedZakiuddin/CryptoView/tree/main/CryptoView-main"
+						target="_blank">
+						CryptoView &nbsp; &nbsp;Android&nbsp;Crypto&nbsp;Tracker<br />
+					</a>
+					</h2>
+				</header>
+
+				<a href="https://github.com/MohammedAhmedZakiuddin/CryptoView/tree/main/CryptoView-main"
+					class="image main">
+					<img src="images/CryptoView.png"
+						alt="CryptoView app mock-up (home, news, favorites)" />
+				</a>
+
+				<p>
+					<strong>CryptoView</strong> is a native Android app that helps investors follow hundreds
+					of cryptocurrencies, curate a personal watch-list, and stay on top of market news —
+					all in one streamlined interface.
+				</p>
+
+				<!-- ---------- KEY FEATURES ------------------------------------ -->
+				<h3 class="card-h3">🔑 Key Features:</h3>
+				<ul style="text-align:left;">
+					<li><strong>Dynamic coin feed:</strong> Home screen auto-loads live prices for 100+ coins.</li>
+					<li><strong>Favorites list:</strong> Tap the ⭐ to pin coins you care about.</li>
+					<li><strong>Search everywhere:</strong> Instant filtering on Home, Favorites, and News.</li>
+					<li><strong>Integrated news feed:</strong> Read the latest crypto headlines in-app.</li>
+					<li><strong>Secure auth:</strong> Register / Login flow with password reset via email.</li>
+					<li><strong>Bottom-nav UX:</strong> Four quick tabs — Home, News, Favorites, Profile.</li>
+				</ul>
+
+				<!-- ---------- TECHNOLOGIES USED ------------------------------- -->
+				<h3 class="card-h3">🧰 Technologies Used:</h3>
+				<ul style="text-align:left;">
+					<li>Android Studio Chipmunk (API&nbsp;33 emulator)</li>
+					<li>Kotlin&nbsp;1.8 / Jetpack Compose &nbsp;<em>(or XML layouts if legacy)</em></li>
+					<li>REST&nbsp;API for crypto prices (CoinGecko / CoinMarketCap)</li>
+					<li>Firebase Auth & Firestore <em>(user accounts + favorites)</em></li>
+					<li>Retrofit · Coroutines · LiveData / Flow</li>
+					<li>Material&nbsp;3 design components</li>
+					<li>Git &amp; GitHub</li>
+				</ul>
+
+				<!-- ---------- HOW TO GET STARTED ------------------------------ -->
+				<h3 class="card-h3">🚀 How to Get Started:</h3>
+				<ul style="text-align:left;">
+					<li>
+					<strong>Clone the repo →</strong><br>
+					<code class="clone-cmd">
+						git clone - 
+					</code>
+					<code>
+						github.com/MohammedAhmedZakiuddin/CryptoView.git
+					</code>
+					</li>
+					<li>Open the project in <code>Android&nbsp;Studio&nbsp;Chipmunk&nbsp;2021.2</code>.</li>
+					<li>Install / launch the <code>Pixel&nbsp;5&nbsp;API 33</code> emulator (or any real device).</li>
+					<li>Press <code>Run&nbsp;▸&nbsp;</code>; Gradle will build and deploy the app.</li>
+					<li>Create an account or log in to explore coins, news, and favorites.</li>
+				</ul>
+
+				<ul class="actions special">
+					<li>
+					<a href="https://github.com/MohammedAhmedZakiuddin/CryptoView/tree/main/CryptoView-main"
+						class="button github-btn" target="_blank">
+						<i class="fab fa-github"></i> github
+					</a>
+					</li>
+				</ul>
 				</article>
 
 				<article>
-					<header>
-						<h2><a href="https://price-vision.herokuapp.com/" target="_blank">Price Vision - Real
-								Estate
-								Price Prediction<br />
-							</a></h2>
-					</header>
-					<a href="https://price-vision.herokuapp.com/" target="_blank" class="image fit"><img
-							src="images/vision.png" alt="" /></a>
-					<p> This is a python website application that uses Regression models like Linear Regression,
-						Lasso
-						Regression, Tree Models, Ensemble Models, and Pipelines to reduce the Root Mean Square
-						Error
-						(RMSE) on the features to predict the correct label (Price). Libraries used - Scikit
-						Learn,
-						NumPy.</p>
-					<ul class="actions special">
-						<li>
-							<a href="https://price-vision.herokuapp.com/" class="button github-btn" target="_blank">
-								<i class="fab fa-github"></i> Github
-							</a>
-						</li>
-					</ul>
+				<header>
+					<h2>
+						<a href="https://github.com/MohammedAhmedZakiuddin/RentalXpress" target="_blank">
+							RentalXpress &nbsp;&nbsp;Car&nbsp;Rental&nbsp;Database<br />
+						</a>
+					</h2>
+				</header>
+
+				<a href="https://github.com/MohammedAhmedZakiuddin/RentalXpress" class="image main">
+					<img src="images/RentalXPress.png" alt="RentalXpress data-flow / GUI screenshot" />
+				</a>
+
+				<p>
+					<strong>RentalXpress</strong> is a lightweight car-rental database demo that ships with CSV seed data,
+					an <em>SQLite&nbsp;3</em> schema, and a <em>Tkinter</em> GUI written in Python.  
+					Import the data, fire up <code>gui.py</code>, and you’ve got a fully functional desktop app
+					for managing customers, vehicles, rates, and rentals—perfect for learning SQL + Python GUI basics.
+				</p>
+
+				<h3 class="card-h3">🔑 Key Features:</h3>
+				<ul style="text-align: left;">
+					<li><strong>Relational schema&nbsp;ready:</strong> CUSTOMER, VEHICLE, RATE, and RENTAL tables with sample data.</li>
+					<li><strong>One-file database:</strong> Uses <code>CarRental2019.db</code> – no server to install.</li>
+					<li><strong>Python GUI:</strong> Tkinter front-end for browsing &amp; editing records.</li>
+					<li><strong>CSV import scripts:</strong> Quick commands to load the provided datasets.</li>
+					<li><strong>Clear install docs:</strong> Step-by-step SQLite and Python launch instructions.</li>
+				</ul>
+
+				<h3 class="card-h3">🧰 Technologies Used:</h3>
+				<ul style="text-align: left;">
+					<li>Python&nbsp;3.10&nbsp;(Tkinter GUI)</li>
+					<li>SQLite&nbsp;3</li>
+					<li>CSV seed files</li>
+					<li>Visual Studio Code / Notepad++</li>
+					<li>Terminal / Command Prompt</li>
+				</ul>
+
+				<h3 class="card-h3">🚀 How to Get Started:</h3>
+				<ul style="text-align: left;">
+					<li>Clone the repo &nbsp;→&nbsp; <code>git clone - </code></li>
+					<code>github.com/MohammedAhmedZakiuddin/RentalXpress.git</code>
+					<li><strong>Import CSVs into SQLite</strong>:<br>
+						<code>
+						sqlite3<br>
+						.open CarRental2019.db<br>
+						.headers on &nbsp; | &nbsp; .mode csv<br>
+						.import CUSTOMER.csv CUSTOMER<br>
+						.import RATE.csv RATE<br>
+						.import RENTAL.csv RENTAL<br>
+						.import VEHICLE.csv VEHICLE<br>
+						.schema &nbsp;# verify tables
+						</code>
+					</li>
+					<li>Check Python version &nbsp;→&nbsp; <code>python --version</code> (3.10+ recommended)</li>
+					<li>Launch the GUI &nbsp;→&nbsp; <code>python gui.py</code></li>
+					<li>Browse, add, or edit car-rental records via the Tkinter window.</li>
+				</ul>
+
+				<ul class="actions special">
+					<li>
+					<a href="https://github.com/MohammedAhmedZakiuddin/RentalXpress" class="button github-btn" target="_blank">
+						<i class="fab fa-github"></i> github
+					</a>
+					</li>
+				</ul>
 				</article>
 
 				<article>
@@ -665,7 +772,7 @@
 						Build scalable Java-based backend applications with this Spring Boot project, designed to demonstrate modern RESTful API development using industry-standard tools and frameworks. The application features database integration, service layers, containerized environments, and clean architecture principles — ideal for real-world deployment and professional use.
 					</p>
 
-					<h3 style="text-align: left; font-weight:550; ">🔑 Key Features:</h3>
+					<h3 class="card-h3">🔑 Key Features:</h3>
 					<ul style="text-align: left;">
 						<li>Develop and expose REST APIs using Spring Boot and Spring MVC.</li>
 						<li>Implement database interactions with Spring Data JPA.</li>
@@ -675,7 +782,7 @@
 						<li>Externalized configuration via <code>application.properties</code></li>
 					</ul>
 
-					<h3 style="text-align: left; font-weight: 550">🧰 Technologies Used:</h3>
+					<h3 class="card-h3">🧰 Technologies Used:</h3>
 					<ul style="text-align: left;">
 						<li>Java 21</li>
 						<li>Spring Boot</li>
@@ -686,14 +793,14 @@
 						<li>IntelliJ IDEA</li>
 					</ul>
 
-					<h3 style="text-align: left; font-weight: 550">🚀 How to Get Started:</h3>
+					<h3 class="card-h3">🚀 How to Get Started:</h3>
 					<ul style="text-align: left;">
-						<li>Clone the repository and open it in IntelliJ IDEA</li>
-						<li>Ensure JDK 21 and Maven are installed</li>
+						<li>Clone the repository and open it in IntelliJ IDEA.</li>
+						<li>Ensure JDK 21 and Maven are installed.</li>
 						<li>Start PostgreSQL using <code>docker-compose up</code></li>
 						<li>Configure database credentials in <code>application.properties</code></li>
-						<li>Run the Spring Boot application</li>
-						<li>Test the endpoints using Postman or IntelliJ HTTP client</li>
+						<li>Run the Spring Boot application.</li>
+						<li>Test the endpoints using Postman or IntelliJ HTTP client.</li>
 					</ul>
 
 					<ul class="actions special" style="text-align: left;">
@@ -720,7 +827,7 @@
 						Leverage the power of OpenAI and modern Spring Boot frameworks in this interactive full-stack project that features AI-powered chat, image generation, and recipe creation. Built using Spring AI and React, this application demonstrates scalable backend design, modular UI components, and clean API integration — ideal for real-world deployment and developer learning.
 					</p>
 
-					<h3 style="text-align: left; font-weight:550;">🔑 KEY FEATURES:</h3>
+					<h3 class="card-h3">🔑 Key Features:</h3>
 					<ul style="text-align: left;">
 						<li><strong>Image Generator:</strong> Generate AI-powered images using DALL·E from natural language prompts.</li>
 						<li><strong>Ask AI:</strong> Chat with OpenAI's language model using Spring AI integration via REST.</li>
@@ -732,7 +839,7 @@
 						<li><strong>Frontend and backend</strong> are decoupled and deployed independently.</li>
 					</ul>
 
-					<h3 style="text-align: left; font-weight: 550">🧰 Technologies Used:</h3>
+					<h3 class="card-h3">🧰 Technologies Used:</h3>
 					<ul style="text-align: left;">
 						<li>Java 21</li>
 						<li>Spring Boot</li>
@@ -745,7 +852,7 @@
 						<li>IntelliJ IDEA & VS Code</li>
 					</ul>
 
-					<h3 style="text-align: left; font-weight: 550">🚀 How to Get Started:</h3>
+					<h3 class="card-h3">🚀 How to Get Started:</h3>
 					<ul style="text-align: left;">
 						<li>Clone the project repository from GitHub.</li>
 						<li>Open the backend in <code>IntelliJ IDEA</code> and the frontend in <code>VS Code</code></li>
@@ -754,7 +861,6 @@
 						<li>Run the backend with <code>mvn spring-boot:run</code> and the frontend using <code>npm start</code></li>
 						<li>Access the app through the React interface or test endpoints using Postman.</li>
 					</ul>
-
 
 					<ul class="actions special">
 						<li>
@@ -784,7 +890,7 @@
 						modular React components, and a production-ready API layer that’s perfect for podcasts, lectures, and meetings.
 					</p>
 
-					<h3 style="text-align: left; font-weight:550;">🔑 KEY FEATURES:</h3>
+					<h3 class="card-h3">🔑 Key Features:</h3>
 					<ul style="text-align: left;">
 						<li><strong>Multi-language transcription:</strong> Auto-detects language and outputs Unicode-clean text.</li>
 						<li><strong>Timestamps &amp; speaker breaks:</strong> Paragraph splits on silence; optional SRT/VTT export.</li>
@@ -796,7 +902,7 @@
 						<li><strong>Decoupled React UI:</strong> Any SPA or mobile client can consume the REST API.</li>
 					</ul>
 
-					<h3 style="text-align: left; font-weight:550;">🧰 Technologies Used:</h3>
+					<h3 class="card-h3">🧰 Technologies Used:</h3>
 					<ul style="text-align: left;">
 						<li>Java 21</li>
 						<li>Spring Boot 3 + Spring AI (Whisper & GPT)</li>
@@ -809,7 +915,7 @@
 						<li>IntelliJ IDEA & VS Code</li>
 					</ul>
 
-					<h3 style="text-align: left; font-weight:550;">🚀 How to Get Started:</h3>
+					<h3 class="card-h3">🚀 How to Get Started:</h3>
 					<ul style="text-align: left;">
 						<li>Clone the project repository from GitHub.</li>
 						<li>Open the backend in <code>IntelliJ IDEA</code> and the frontend in <code>VS Code</code>.</li>
