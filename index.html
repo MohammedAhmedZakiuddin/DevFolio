@@ -497,19 +497,52 @@
 		<!-- ──────────────────────────────────────────────────────────── -->
 			<!-- Featured Post -->
 			<article class="post featured">
-				<header class="major">
-					<h2><a href="https://github.com/MohammedAhmedZakiuddin/F1GP-Winner-Predictor" target="_blank">F1 Grand Prix Winner
-						ML Prediction <br />
-						</a>
-					</h2>
-				</header>
-				<a href="https://github.com/MohammedAhmedZakiuddin/F1GP-Winner-Predictor" target="_blank" class="image fit"><img
-						src="images/F1_Image.png" alt="" /></a>
-				<p>
-					🏁 <strong>F1 Grand Prix Winner Prediction</strong> is a machine learning application designed to 
-					predict the <strong>winner of Formula 1 Grand Prix races</strong> by analyzing comprehensive race telemetry 
-					and performance data using the <strong>FastF1 API</strong> (2024 season).
-				</p>
+			<header class="major">
+				<h2>
+				<a href="https://github.com/MohammedAhmedZakiuddin/F1GP-Winner-Predictor" target="_blank">
+					F1 Grand Prix Winner<br />ML Prediction
+				</a>
+				</h2>
+			</header>
+
+			<!-- Carousel Container -->
+			<div class="carousel-container" style="position: relative; max-width: 100%; margin: auto;">
+				<div class="carousel-slide fade">
+				<img src="images/F1_Image.png" style="width:100%" alt="Race Overview">
+				</div>
+				<div class="carousel-slide fade">
+				<img src="images/F1_Image_1.png" style="width:100%" alt="Model Evaluation">
+				</div>
+				<div class="carousel-slide fade">
+				<img src="images/F1_Image_2.png" style="width:100%" alt="Prediction Result">
+				</div>
+				
+				<!-- Next/Prev Buttons -->
+				<a class="prev" onclick="plusSlides(-1)" style="cursor:pointer; position:absolute;top:50%;left:0;padding:16px;color:white;font-weight:bold;font-size:18px;">&#10094;</a>
+				<a class="next" onclick="plusSlides(1)" style="cursor:pointer; position:absolute;top:50%;right:0;padding:16px;color:white;font-weight:bold;font-size:18px;">&#10095;</a>
+			</div>
+
+			<p>
+				🏁 <strong>F1 Grand Prix Winner Prediction</strong> is a machine learning application designed to predict the 
+				<strong>winner of Formula 1 Grand Prix races</strong> by analyzing comprehensive race telemetry and performance 
+				data using the <strong>FastF1 API</strong> (2024 season).
+			</p>
+
+			<p>
+				📅 The project includes <strong>predictions for all 24 races in the 2025 F1 calendar</strong>. 
+				Each race is processed individually using updated driver, team, and track data prior to race weekend.
+			</p>
+
+			<p>
+				📊 <strong>Results and predictions</strong> are available and continually updated in the GitHub repository. 
+				You can <a href="https://github.com/MohammedAhmedZakiuddin/F1GP-Winner-Predictor" target="_blank">
+				follow along the season</a> to track model accuracy and winner forecasts.
+			</p>
+
+			<a href="images/F1_2025_Calendar.png" target="_blank" class="image fit">
+				<img src="images/F1_Image_3.png" alt="2025 F1 Race Calendar" />
+			</a>
+
 
 				<h3 class="card-h3">🔍 Key Features:</h3>
 				<ul style="text-align: left;">
@@ -540,6 +573,26 @@
 					</li>
 				</ul>
 			</article>
+
+			<script>
+				let slideIndex = 1;
+				showSlides(slideIndex);
+
+				function plusSlides(n) {
+				showSlides(slideIndex += n);
+				}
+
+				function showSlides(n) {
+				let i;
+				const slides = document.getElementsByClassName("carousel-slide");
+				if (n > slides.length) {slideIndex = 1}
+				if (n < 1) {slideIndex = slides.length}
+				for (i = 0; i < slides.length; i++) {
+					slides[i].style.display = "none";
+				}
+				slides[slideIndex-1].style.display = "block";
+				}
+			</script>
 
 			<section class="posts">
 				<article>
